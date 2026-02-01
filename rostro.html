@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Módulo Shiatsu Namikoshi - Región Rostro</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #2c3e50;
+            --accent-color: #e67e22;
+            --bg-color: #f4f7f6;
+            --text-color: #333;
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--bg-color);
+            margin: 0;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 850px;
+            margin: 0 auto;
+            background: #fff;
+            padding: 40px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            border-radius: 8px;
+        }
+
+        header {
+            text-align: center;
+            border-bottom: 3px solid var(--accent-color);
+            margin-bottom: 30px;
+            padding-bottom: 10px;
+        }
+
+        h1 { color: var(--primary-color); text-transform: uppercase; margin: 0; }
+        h2 { color: var(--accent-color); border-left: 5px solid var(--accent-color); padding-left: 10px; margin-top: 40px; }
+
+        .ficha-tecnica {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            background: #f9f9f9;
+            padding: 20px;
+            border-radius: 5px;
+            margin-bottom: 20px;
+        }
+
+        .ficha-item { font-size: 0.9em; }
+        .ficha-item strong { color: var(--primary-color); display: block; }
+
+        .image-gallery {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+            margin: 20px 0;
+        }
+
+        .image-gallery img {
+            width: 100%;
+            height: auto;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            display: block;
+        }
+
+        .btn-print {
+            background: var(--primary-color);
+            color: white;
+            padding: 15px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-bottom: 20px;
+            transition: 0.3s;
+            width: 100%;
+            font-weight: bold;
+            font-size: 1.1em;
+        }
+
+        .btn-print:hover { background: var(--accent-color); }
+
+        @media print {
+            .btn-print { display: none !important; }
+            body { background: white; padding: 0; margin: 0; }
+            .container { box-shadow: none; max-width: 100%; width: 100%; padding: 0; }
+            h2 { page-break-before: always; }
+            .image-gallery img { max-width: 280px; }
+            .ficha-tecnica { border: 1px solid #eee; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <button class="btn-print" onclick="setTimeout(function(){ window.print(); }, 500);">Descargar Guía en PDF / Imprimir</button>
+
+        <header>
+            <h1>Shiatsu Namikoshi</h1>
+            <p>Guía de Aplicación: Región Rostro</p>
+        </header>
+
+        <section id="proc1">
+            <h2>PROCEDIMIENTO 1: Región Frontal</h2>
+            <div class="ficha-tecnica">
+                <div class="ficha-item"><strong>Postura Paciente:</strong> Supino, piernas rectas.</div>
+                <div class="ficha-item"><strong>Postura Terapeuta:</strong> De rodillas, frente a la región.</div>
+                <div class="ficha-item"><strong>Tipo de Presión:</strong> Pulgar sobre pulgar.</div>
+                <div class="ficha-item"><strong>Número de Puntos:</strong> 3 puntos.</div>
+                <div class="ficha-item"><strong>Dirección:</strong> Entrecejo hacia nacimiento del cabello.</div>
+                <div class="ficha-item"><strong>Frecuencia:</strong> 3 veces, 3 segundos.</div>
+            </div>
+            <div class="image-gallery">
+                <img src="imagenes/rostro_proc1_puntos.png" alt="Mapa de puntos región frontal">
+                <img src="imagenes/rostro_proc1_app.png" alt="Aplicación en región frontal">
+            </div>
+        </section>
+
+        <section id="proc2">
+            <h2>PROCEDIMIENTO 2: Región Nasal</h2>
+            <div class="ficha-tecnica">
+                <div class="ficha-item"><strong>Postura Terapeuta:</strong> Seiza, frente a la región.</div>
+                <div class="ficha-item"><strong>Tipo de Presión:</strong> Dedo medio sobre índice.</div>
+                <div class="ficha-item"><strong>Número de Puntos:</strong> 3 puntos.</div>
+                <div class="ficha-item"><strong>Dirección:</strong> Raíz de la nariz hacia labio superior.</div>
+                <div class="ficha-item"><strong>Dirección Presión:</strong> Perpendicular.</div>
+                <div class="ficha-item"><strong>Frecuencia:</strong> 1 vez, 3 segundos.</div>
+            </div>
+            <div class="image-gallery">
+                <img src="imagenes/rostro_proc2_puntos.png" alt="Mapa de puntos región nasal">
+                <img src="imagenes/rostro_proc2_app.png" alt="Aplicación en región nasal">
+            </div>
+        </section>
+
+        <section id="proc3">
+            <h2>PROCEDIMIENTO 3: Región Zigomática</h2>
+            <div class="ficha-tecnica">
+                <div class="ficha-item"><strong>Postura Terapeuta:</strong> Seiza, frente a la región.</div>
+                <div class="ficha-item"><strong>Tipo de Presión:</strong> Índice, medio y anular (ambas manos).</div>
+                <div class="ficha-item"><strong>Número de Puntos:</strong> 3 a cada lado.</div>
+                <div class="ficha-item"><strong>Técnica:</strong> Ligera tracción hacia el terapeuta.</div>
+                <div class="ficha-item"><strong>Frecuencia:</strong> 1 vez, 3 segundos (simultáneo).</div>
+            </div>
+            <div class="image-gallery">
+                <img src="imagenes/rostro_proc3_puntos.png" alt="Mapa de puntos región zigomática">
+                <img src="imagenes/rostro_proc3_app.png" alt="Aplicación en región zigomática">
+            </div>
+        </section>
+
+        <section id="proc4">
+            <h2>PROCEDIMIENTO 4: Región Orbital y Sien</h2>
+            <div class="ficha-tecnica">
+                <div class="ficha-item"><strong>Tipo de Presión:</strong> Un solo pulgar (mano opuesta en frente).</div>
+                <div class="ficha-item"><strong>Número de Puntos:</strong> Orbital 4, Sien 3.</div>
+                <div class="ficha-item"><strong>Líneas:</strong> Inf. y Sup. (interno a externo) y Sien.</div>
+                <div class="ficha-item"><strong>Dirección Presión:</strong> Perpendicular.</div>
+                <div class="ficha-item"><strong>Frecuencia:</strong> 1 vez, 3 segundos por lado.</div>
+            </div>
+            <div class="image-gallery">
+                <img src="imagenes/rostro_proc4_puntos.png" alt="Mapa de puntos orbitales y sien">
+                <img src="imagenes/rostro_proc4_app.png" alt="Aplicación orbital y sien">
+            </div>
+        </section>
+
+        <section id="proc5">
+            <h2>PROCEDIMIENTO 5: Presión sobre los Globos Oculares</h2>
+            <div class="ficha-tecnica">
+                <div class="ficha-item"><strong>Postura Terapeuta:</strong> Seiza, frente a la región.</div>
+                <div class="ficha-item"><strong>Tipo de Presión:</strong> Palmar (puntas de dedos al centro).</div>
+                <div class="ficha-item"><strong>Técnica:</strong> Ligera presión simultánea.</div>
+                <div class="ficha-item"><strong>Frecuencia:</strong> 1 vez, 10 segundos.</div>
+            </div>
+            <div class="image-gallery">
+                <img src="imagenes/rostro_proc5_puntos.png" alt="Puntos globos oculares">
+                <img src="imagenes/rostro_proc5_app.png" alt="Aplicación palmar globos oculares">
+            </div>
+        </section>
+
+        <footer style="margin-top: 50px; text-align: center; font-size: 0.8em; color: #888;">
+            <p>Espacio INYO - Carlos Tejedor 335, Lanús Oeste Centro</p>
+            <p>Guía de estudio exclusiva para alumnos de Shiatsu Namikoshi.</p>
+        </footer>
+    </div>
+
+</body>
+</html>
