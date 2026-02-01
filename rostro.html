@@ -77,13 +77,17 @@
             border-radius: 5px;
             cursor: pointer;
             margin-bottom: 20px;
-            transition: 0.3s;
+            transition: 0.2s;
             width: 100%;
             font-weight: bold;
             font-size: 1.1em;
+            -webkit-appearance: none; /* Mejora compatibilidad iOS */
         }
 
-        .btn-print:hover { background: var(--accent-color); }
+        .btn-print:active {
+            background: var(--accent-color);
+            transform: scale(0.98);
+        }
 
         @media print {
             .btn-print { display: none !important; }
@@ -98,7 +102,7 @@
 <body>
 
     <div class="container">
-        <button class="btn-print" onclick="setTimeout(function(){ window.print(); }, 500);">Descargar Guía en PDF / Imprimir</button>
+        <button class="btn-print" onclick="window.focus(); window.print();">Descargar Guía en PDF / Imprimir</button>
 
         <header>
             <h1>Shiatsu Namikoshi</h1>
@@ -108,11 +112,10 @@
         <section id="proc1">
             <h2>PROCEDIMIENTO 1: Región Frontal</h2>
             <div class="ficha-tecnica">
-                <div class="ficha-item"><strong>Postura Paciente:</strong> Supino, piernas rectas.</div>
                 <div class="ficha-item"><strong>Postura Terapeuta:</strong> De rodillas, frente a la región.</div>
                 <div class="ficha-item"><strong>Tipo de Presión:</strong> Pulgar sobre pulgar.</div>
                 <div class="ficha-item"><strong>Número de Puntos:</strong> 3 puntos.</div>
-                <div class="ficha-item"><strong>Dirección:</strong> Entrecejo hacia nacimiento del cabello.</div>
+                <div class="ficha-item"><strong>Dirección:</strong> Entrecejo hacia el nacimiento del cabello.</div>
                 <div class="ficha-item"><strong>Frecuencia:</strong> 3 veces, 3 segundos.</div>
             </div>
             <div class="image-gallery">
@@ -127,8 +130,7 @@
                 <div class="ficha-item"><strong>Postura Terapeuta:</strong> Seiza, frente a la región.</div>
                 <div class="ficha-item"><strong>Tipo de Presión:</strong> Dedo medio sobre índice.</div>
                 <div class="ficha-item"><strong>Número de Puntos:</strong> 3 puntos.</div>
-                <div class="ficha-item"><strong>Dirección:</strong> Raíz de la nariz hacia labio superior.</div>
-                <div class="ficha-item"><strong>Dirección Presión:</strong> Perpendicular.</div>
+                <div class="ficha-item"><strong>Dirección:</strong> Raíz de la nariz hacia el labio superior.</div>
                 <div class="ficha-item"><strong>Frecuencia:</strong> 1 vez, 3 segundos.</div>
             </div>
             <div class="image-gallery">
@@ -140,8 +142,7 @@
         <section id="proc3">
             <h2>PROCEDIMIENTO 3: Región Zigomática</h2>
             <div class="ficha-tecnica">
-                <div class="ficha-item"><strong>Postura Terapeuta:</strong> Seiza, frente a la región.</div>
-                <div class="ficha-item"><strong>Tipo de Presión:</strong> Índice, medio y anular (ambas manos).</div>
+                <div class="ficha-item"><strong>Tipo de Presión:</strong> Dedos índice, medio y anular (ambas manos).</div>
                 <div class="ficha-item"><strong>Número de Puntos:</strong> 3 a cada lado.</div>
                 <div class="ficha-item"><strong>Técnica:</strong> Ligera tracción hacia el terapeuta.</div>
                 <div class="ficha-item"><strong>Frecuencia:</strong> 1 vez, 3 segundos (simultáneo).</div>
@@ -157,8 +158,7 @@
             <div class="ficha-tecnica">
                 <div class="ficha-item"><strong>Tipo de Presión:</strong> Un solo pulgar (mano opuesta en frente).</div>
                 <div class="ficha-item"><strong>Número de Puntos:</strong> Orbital 4, Sien 3.</div>
-                <div class="ficha-item"><strong>Líneas:</strong> Inf. y Sup. (interno a externo) y Sien.</div>
-                <div class="ficha-item"><strong>Dirección Presión:</strong> Perpendicular.</div>
+                <div class="ficha-item"><strong>Dirección:</strong> Ángulo interno hacia externo.</div>
                 <div class="ficha-item"><strong>Frecuencia:</strong> 1 vez, 3 segundos por lado.</div>
             </div>
             <div class="image-gallery">
@@ -168,10 +168,9 @@
         </section>
 
         <section id="proc5">
-            <h2>PROCEDIMIENTO 5: Presión sobre los Globos Oculares</h2>
+            <h2>PROCEDIMIENTO 5: Globos Oculares</h2>
             <div class="ficha-tecnica">
-                <div class="ficha-item"><strong>Postura Terapeuta:</strong> Seiza, frente a la región.</div>
-                <div class="ficha-item"><strong>Tipo de Presión:</strong> Palmar (puntas de dedos al centro).</div>
+                <div class="ficha-item"><strong>Tipo de Presión:</strong> Palmar (puntas de los dedos al centro).</div>
                 <div class="ficha-item"><strong>Técnica:</strong> Ligera presión simultánea.</div>
                 <div class="ficha-item"><strong>Frecuencia:</strong> 1 vez, 10 segundos.</div>
             </div>
