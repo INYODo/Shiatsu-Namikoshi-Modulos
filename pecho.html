@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Módulo Shiatsu Namikoshi - Región Pecho</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #2c3e50;
+            --accent-color: #e67e22;
+            --bg-color: #f4f7f6;
+            --text-color: #333;
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--bg-color);
+            margin: 0;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 850px;
+            margin: 0 auto;
+            background: #fff;
+            padding: 40px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            border-radius: 8px;
+        }
+
+        header {
+            text-align: center;
+            border-bottom: 3px solid var(--accent-color);
+            margin-bottom: 30px;
+            padding-bottom: 10px;
+        }
+
+        h1 { color: var(--primary-color); text-transform: uppercase; margin: 0; }
+        h2 { color: var(--accent-color); border-left: 5px solid var(--accent-color); padding-left: 10px; margin-top: 40px; }
+
+        .ficha-tecnica {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            background: #f9f9f9;
+            padding: 20px;
+            border-radius: 5px;
+            margin-bottom: 20px;
+        }
+
+        .ficha-item { font-size: 0.9em; }
+        .ficha-item strong { color: var(--primary-color); display: block; }
+
+        .nota-importante {
+            background-color: #fff3e0;
+            border-left: 5px solid #ff9800;
+            padding: 10px;
+            margin: 10px 0;
+            font-size: 0.9em;
+            font-style: italic;
+        }
+
+        .image-gallery {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+            margin: 20px 0;
+        }
+
+        .image-gallery img {
+            width: 100%;
+            height: auto;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            display: block;
+        }
+
+        .btn-print {
+            background-color: var(--primary-color);
+            color: #ffffff;
+            padding: 18px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            margin-bottom: 25px;
+            width: 100%;
+            font-weight: bold;
+            font-size: 1.2em;
+            display: block;
+            text-align: center;
+            -webkit-appearance: none;
+        }
+
+        .btn-print:active {
+            background-color: var(--accent-color) !important;
+            transform: scale(0.98);
+        }
+
+        @media print {
+            .btn-print { display: none !important; }
+            body { background: white; padding: 0; margin: 0; }
+            .container { box-shadow: none; max-width: 100%; width: 100%; padding: 0; }
+            h2 { page-break-before: always; }
+            .image-gallery img { max-width: 280px; }
+            .ficha-tecnica { border: 1px solid #eee; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <button type="button" class="btn-print" onclick="window.print();">
+            OBTENER GUÍA PDF / IMPRIMIR
+        </button>
+
+        <header>
+            <h1>Shiatsu Namikoshi</h1>
+            <p>Guía de Aplicación: Región Pecho</p>
+        </header>
+
+        <section id="proc1">
+            <h2>PROCEDIMIENTO 1: Región Intercostal</h2>
+            <div class="ficha-tecnica">
+                <div class="ficha-item"><strong>Postura Terapeuta:</strong> Seiza o rodillas frente a la región.</div>
+                <div class="ficha-item"><strong>Tipo de Presión:</strong> Un solo pulgar (mano opuesta en hombro).</div>
+                <div class="ficha-item"><strong>Número de Puntos:</strong> 4 x 6 x 2.</div>
+                <div class="ficha-item"><strong>Dirección:</strong> Del borde del esternón hacia lateral.</div>
+                <div class="ficha-item"><strong>Frecuencia:</strong> 1 vez, 2 segundos.</div>
+            </div>
+            <div class="nota-importante">
+                6 líneas entre costillas (1º entre 1º y 2º costilla). En mujeres, líneas 1-3 sobre la mama y el resto debajo.
+            </div>
+            <div class="image-gallery">
+                <img src="imagenes/pecho_proc1_puntos.png" alt="Puntos región intercostal">
+                <img src="imagenes/pecho_proc1_app.png" alt="Aplicación región intercostal">
+            </div>
+        </section>
+
+        
+
+        <section id="proc2">
+            <h2>PROCEDIMIENTO 2: Región Esternón</h2>
+            <div class="ficha-tecnica">
+                <div class="ficha-item"><strong>Postura Terapeuta:</strong> Seiza o rodillas frente a la región.</div>
+                <div class="ficha-item"><strong>Tipo de Presión:</strong> Pulgares en "A".</div>
+                <div class="ficha-item"><strong>Número de Puntos:</strong> 5 puntos.</div>
+                <div class="ficha-item"><strong>Línea:</strong> Inf. del manubrio hasta antes del apéndice xifoides.</div>
+                <div class="ficha-item"><strong>Frecuencia:</strong> 3 veces, 3 segundos.</div>
+            </div>
+            <div class="image-gallery">
+                <img src="imagenes/pecho_proc2_puntos.png" alt="Puntos esternón">
+                <img src="imagenes/pecho_proc2_app.png" alt="Aplicación en esternón">
+            </div>
+        </section>
+
+        <section id="proc3">
+            <h2>PROCEDIMIENTO 3: Región Pectoral Maniobra 1</h2>
+            <div class="ficha-tecnica">
+                <div class="ficha-item"><strong>Postura Terapeuta:</strong> Seiza, frente a la región.</div>
+                <div class="ficha-item"><strong>Tipo de Presión:</strong> Palmar (ambas palmas).</div>
+                <div class="ficha-item"><strong>Técnica:</strong> Presión rotacional hacia afuera (simultánea).</div>
+                <div class="ficha-item"><strong>Frecuencia:</strong> 10 veces.</div>
+            </div>
+            <div class="image-gallery">
+                <img src="imagenes/pecho_proc3_puntos.png" alt="Mapa maniobra rotacional">
+                <img src="imagenes/pecho_proc3_app.png" alt="Aplicación rotacional">
+            </div>
+        </section>
+
+        <section id="proc4">
+            <h2>PROCEDIMIENTO 4: Región Pectoral Maniobra 2</h2>
+            <div class="ficha-tecnica">
+                <div class="ficha-item"><strong>Tipo de Presión:</strong> Palmar (acompañando respiración).</div>
+                <div class="ficha-item"><strong>Técnica:</strong> Presión firme hacia abajo durante exhalación.</div>
+                <div class="ficha-item"><strong>Frecuencia:</strong> 2 veces.</div>
+                <div class="ficha-item"><strong>Nota:</strong> Mantener palmas bien pegadas al cuerpo.</div>
+            </div>
+            <div class="image-gallery">
+                <img src="imagenes/pecho_proc4_puntos.png" alt="Sincronización respiratoria">
+                <img src="imagenes/pecho_proc4_app.png" alt="Aplicación durante exhalación">
+            </div>
+        </section>
+
+        <footer style="margin-top: 50px; text-align: center; font-size: 0.8em; color: #888;">
+            <p>Espacio INYO - Carlos Tejedor 335, Lanús Oeste Centro</p>
+            <p>Guía de estudio exclusiva para alumnos de Shiatsu Namikoshi.</p>
+        </footer>
+    </div>
+
+</body>
+</html>
