@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Módulo Shiatsu Namikoshi - Región Abdomen</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #2c3e50;
+            --accent-color: #e67e22;
+            --bg-color: #f4f7f6;
+            --text-color: #333;
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--bg-color);
+            margin: 0;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 850px;
+            margin: 0 auto;
+            background: #fff;
+            padding: 40px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            border-radius: 8px;
+        }
+
+        header {
+            text-align: center;
+            border-bottom: 3px solid var(--accent-color);
+            margin-bottom: 30px;
+            padding-bottom: 10px;
+        }
+
+        h1 { color: var(--primary-color); text-transform: uppercase; margin: 0; }
+        h2 { color: var(--accent-color); border-left: 5px solid var(--accent-color); padding-left: 10px; margin-top: 40px; }
+
+        .ficha-tecnica {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            background: #f9f9f9;
+            padding: 20px;
+            border-radius: 5px;
+            margin-bottom: 15px;
+        }
+
+        .ficha-item { font-size: 0.9em; }
+        .ficha-item strong { color: var(--primary-color); display: block; }
+
+        .lista-puntos {
+            background-color: #eef2f3;
+            padding: 15px;
+            border-radius: 5px;
+            font-size: 0.85em;
+            margin-bottom: 20px;
+            border: 1px dashed #bdc3c7;
+        }
+
+        .image-gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 15px;
+            margin: 20px 0;
+        }
+
+        .image-gallery img {
+            width: 100%;
+            height: auto;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            display: block;
+        }
+
+        .btn-print {
+            background-color: var(--primary-color);
+            color: #ffffff;
+            padding: 18px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            margin-bottom: 25px;
+            width: 100%;
+            font-weight: bold;
+            font-size: 1.2em;
+            display: block;
+            text-align: center;
+            -webkit-appearance: none;
+        }
+
+        .btn-print:active { background-color: var(--accent-color) !important; transform: scale(0.98); }
+
+        @media print {
+            .btn-print { display: none !important; }
+            body { background: white; padding: 0; margin: 0; }
+            .container { box-shadow: none; max-width: 100%; width: 100%; padding: 0; }
+            h2 { page-break-before: always; }
+            .image-gallery img { max-width: 200px; }
+            .ficha-tecnica { border: 1px solid #eee; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <button type="button" class="btn-print" onclick="window.print();">
+            OBTENER GUÍA PDF / IMPRIMIR
+        </button>
+
+        <header>
+            <h1>Shiatsu Namikoshi</h1>
+            <p>Guía de Aplicación: Región Abdomen</p>
+        </header>
+
+        <section id="proc1">
+            <h2>PROCEDIMIENTO 1: Presión Palmar</h2>
+            <div class="ficha-tecnica">
+                <div class="ficha-item"><strong>Postura Paciente:</strong> Supino, brazos a 90º o sobre pecho.</div>
+                <div class="ficha-item"><strong>Postura Terapeuta:</strong> Seiza, lateral derecha del paciente.</div>
+                <div class="ficha-item"><strong>Tipo de Presión:</strong> Palmar (Mano der. hacia costado izq.).</div>
+                <div class="ficha-item"><strong>Frecuencia:</strong> 3 veces, 3 segundos.</div>
+            </div>
+            <div class="lista-puntos">
+                <strong>Orden (9 puntos):</strong> 1. Epigastrio, 2. I. Delgado, 3. Vejiga, 4. Ciego, 5. Hígado, 6. Bazo, 7. Colon Desc., 8. Colon Sigmoideo, 9. Recto.
+            </div>
+            <div class="image-gallery">
+                <img src="imagenes/abdomen_proc1_puntos.png" alt="Puntos palmares">
+                <img src="imagenes/abdomen_proc1_app.png" alt="Aplicación palmar">
+            </div>
+        </section>
+
+        <section id="proc2">
+            <h2>PROCEDIMIENTO 2: Presión con Pulgares</h2>
+            <div class="ficha-tecnica">
+                <div class="ficha-item"><strong>Tipo de Presión:</strong> Pulgares en "A" (sincronía respiratoria).</div>
+                <div class="ficha-item"><strong>Número de Puntos:</strong> 20 puntos.</div>
+                <div class="ficha-item"><strong>Dirección:</strong> Perpendicular.</div>
+                <div class="ficha-item"><strong>Frecuencia:</strong> 3 veces, 3 segundos.</div>
+            </div>
+            <div class="lista-puntos">
+                <strong>Distribución:</strong> 1-3 Epigastrio al ombligo | 4-6 Ombligo al pubis | 7 Ciego | 8 C. Ascendente | 9-11 Hígado | 12 Plexo Solar | 13-15 Bazo | 16-18 C. Descendente | 19 C. Sigmoideo | 20 Recto.
+            </div>
+            <div class="image-gallery">
+                <img src="imagenes/abdomen_proc2_puntos.png" alt="Mapa 20 puntos pulgares">
+                <img src="imagenes/abdomen_proc2_app.png" alt="Aplicación pulgares">
+            </div>
+        </section>
+
+        <section id="proc3">
+            <h2>PROCEDIMIENTO 3: Intestino Delgado</h2>
+            <div class="ficha-tecnica">
+                <div class="ficha-item"><strong>Tipo de Presión:</strong> Pulgares en "A".</div>
+                <div class="ficha-item"><strong>Número de Puntos:</strong> 8 puntos.</div>
+                <div class="ficha-item"><strong>Dirección:</strong> Sentido agujas del reloj alrededor del ombligo.</div>
+                <div class="ficha-item"><strong>Frecuencia:</strong> 3 veces, 3 segundos.</div>
+            </div>
+            <div class="image-gallery">
+                <img src="imagenes/abdomen_proc3_puntos.png" alt="Circuito Intestino Delgado">
+                <img src="imagenes/abdomen_proc3_app.png" alt="Aplicación I. Delgado">
+            </div>
+        </section>
+
+        <section id="proc4">
+            <h2>PROCEDIMIENTO 4: Colon Descendente</h2>
+            <div class="ficha-tecnica">
+                <div class="ficha-item"><strong>Tipo de Presión:</strong> Palmar (Eminencia tenar mano der.).</div>
+                <div class="ficha-item"><strong>Número de Puntos:</strong> 4 puntos.</div>
+                <div class="ficha-item"><strong>Dirección:</strong> Infracostal izq. hacia Colon Sigmoideo.</div>
+                <div class="ficha-item"><strong>Frecuencia:</strong> 3 veces, 3 segundos.</div>
+            </div>
+            <div class="image-gallery">
+                <img src="imagenes/abdomen_proc4_puntos.png" alt="Línea Colon Descendente">
+                <img src="imagenes/abdomen_proc4_app.png" alt="Aplicación Colon">
+            </div>
+        </section>
+
+        <section id="proc5">
+            <h2>PROCEDIMIENTO 5: Presión Ondulatoria</h2>
+            <div class="ficha-tecnica">
+                <div class="ficha-item"><strong>Postura Terapeuta:</strong> Seiza, frente a la región.</div>
+                <div class="ficha-item"><strong>Tipo de Presión:</strong> Palmar (ambas manos sobre ombligo).</div>
+                <div class="ficha-item"><strong>Técnica:</strong> Tira Colon Desc. / Empuja Colon Asc. (alternado).</div>
+                <div class="ficha-item"><strong>Frecuencia:</strong> 5 veces (leve y firme).</div>
+            </div>
+            <div class="image-gallery">
+                <img src="imagenes/abdomen_proc5_1.png" alt="Maniobra ondulatoria 1">
+                <img src="imagenes/abdomen_proc5_2.png" alt="Maniobra ondulatoria 2">
+                <img src="imagenes/abdomen_proc5_3.png" alt="Maniobra ondulatoria 3">
+                <img src="imagenes/abdomen_proc5_4.png" alt="Maniobra ondulatoria 4">
+            </div>
+        </section>
+
+        <section id="proc6">
+            <h2>PROCEDIMIENTO 6: Presión Circular y Vibracional</h2>
+            <div class="ficha-tecnica">
+                <div class="ficha-item"><strong>Técnica Circular:</strong> 10 veces (sentido agujas del reloj).</div>
+                <div class="ficha-item"><strong>Técnica Vibracional:</strong> 10 segundos (brazos tensos).</div>
+                <div class="ficha-item"><strong>Tipo de Presión:</strong> Palmar penetrante suave.</div>
+            </div>
+            <div class="image-gallery">
+                <img src="imagenes/abdomen_proc6_1.png" alt="Circular">
+                <img src="imagenes/abdomen_proc6_2.png" alt="Vibracional">
+                <img src="imagenes/abdomen_proc6_3.png" alt="Detalle manos">
+            </div>
+        </section>
+
+        <section id="proc7">
+            <h2>PROCEDIMIENTO 7: Región Ilíaca Anterosuperior</h2>
+            <div class="ficha-tecnica">
+                <div class="ficha-item"><strong>Tipo de Presión:</strong> Palmar (Eminencia tenar).</div>
+                <div class="ficha-item"><strong>Técnica:</strong> Presión rítmica alternada (izq/der).</div>
+                <div class="ficha-item"><strong>Frecuencia:</strong> 10 veces (5 por lado), 1 segundo.</div>
+            </div>
+            <div class="image-gallery">
+                <img src="imagenes/abdomen_proc7_1.png" alt="Punto ilíaco">
+                <img src="imagenes/abdomen_proc7_2.png" alt="Aplicación rítmica">
+                <img src="imagenes/abdomen_proc7_3.png" alt="Detalle eminencia tenar">
+            </div>
+        </section>
+
+        <section id="proc8">
+            <h2>PROCEDIMIENTO 8: Maniobra Región Lumbar</h2>
+            <div class="ficha-tecnica">
+                <div class="ficha-item"><strong>Tipo de Presión:</strong> 4 dedos de ambas manos (pulpejos).</div>
+                <div class="ficha-item"><strong>Técnica:</strong> Empuje lumbar hacia arriba (palanca).</div>
+                <div class="ficha-item"><strong>Punto:</strong> Lados de la 3ª vértebra (altura ombligo).</div>
+                <div class="ficha-item"><strong>Frecuencia:</strong> 3 veces.</div>
+            </div>
+            <div class="image-gallery">
+                <img src="imagenes/abdomen_proc8_1.png" alt="Posición bajo espalda">
+                <img src="imagenes/abdomen_proc8_2.png" alt="Maniobra palanca">
+                <img src="imagenes/abdomen_proc8_3.png" alt="Dorso mano en suelo">
+                <img src="imagenes/abdomen_proc8_4.png" alt="Finalización empuje">
+            </div>
+        </section>
+
+        <section id="proc9">
+            <h2>PROCEDIMIENTO 9: Región Abdominal Lateral 1</h2>
+            <div class="ficha-tecnica">
+                <div class="ficha-item"><strong>Tipo de Presión:</strong> Palmar (dedos unidos hacia abajo).</div>
+                <div class="ficha-item"><strong>Técnica:</strong> Tirar rápidamente hacia arriba (deslizando).</div>
+                <div class="ficha-item"><strong>Final:</strong> Palmas enfrentadas al levantar.</div>
+                <div class="ficha-item"><strong>Frecuencia:</strong> 3 veces.</div>
+            </div>
+            <div class="image-gallery">
+                <img src="imagenes/abdomen_proc9_app.png" alt="Inicio lateral">
+                <img src="imagenes/abdomen_proc9_fin.png" alt="Final palmas enfrentadas">
+            </div>
+        </section>
+
+        <section id="proc10">
+            <h2>PROCEDIMIENTO 10: Deslizamiento y Vibración</h2>
+            <div class="ficha-tecnica">
+                <div class="ficha-item"><strong>Deslizamiento:</strong> 10 veces (Epigastrio a ombligo).</div>
+                <div class="ficha-item"><strong>Vibración:</strong> 10 segundos (Manos cruzadas sobre ombligo).</div>
+                <div class="ficha-item"><strong>Técnica:</strong> Rápida y suave alternando manos.</div>
+            </div>
+            <div class="image-gallery">
+                <img src="imagenes/abdomen_proc10_1.png" alt="Deslizamiento">
+                <img src="imagenes/abdomen_proc10_2.png" alt="Posición cruzada">
+                <img src="imagenes/abdomen_proc10_3.png" alt="Vibración ombligo">
+                <img src="imagenes/abdomen_proc10_4.png" alt="Final técnica">
+            </div>
+        </section>
+
+        <footer style="margin-top: 50px; text-align: center; font-size: 0.8em; color: #888;">
+            <p>Espacio INYO - Carlos Tejedor 335, Lanús Oeste Centro</p>
+            <p>Guía de estudio exclusiva para alumnos de Shiatsu Namikoshi.</p>
+        </footer>
+    </div>
+
+</body>
+  </html>
+              
