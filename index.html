@@ -12,6 +12,7 @@
             --bg: #f8f9fa;
             --white: #ffffff;
             --success: #27ae60;
+            --locked: #bdc3c7;
         }
 
         body {
@@ -24,6 +25,58 @@
             min-height: 100vh;
         }
 
+        /* Pantalla de Bloqueo Quirúrgica */
+        #lock-screen {
+            position: fixed;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background: var(--primary);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 9999;
+            color: white;
+            text-align: center;
+        }
+
+        .login-box {
+            background: var(--white);
+            padding: 40px;
+            border-radius: 12px;
+            color: var(--primary);
+            width: 90%;
+            max-width: 400px;
+            box-shadow: 0 15px 30px rgba(0,0,0,0.3);
+        }
+
+        input[type="text"] {
+            width: 100%;
+            padding: 12px;
+            margin: 20px 0;
+            border: 2px solid #ddd;
+            border-radius: 6px;
+            box-sizing: border-box;
+            font-size: 1.1em;
+            text-align: center;
+            text-transform: uppercase;
+        }
+
+        .btn-access {
+            background: var(--accent);
+            color: white;
+            border: none;
+            padding: 12px 30px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-weight: bold;
+            width: 100%;
+            transition: 0.3s;
+        }
+
+        .btn-access:hover { background: #d35400; }
+
+        #main-content { display: none; }
+
+        /* Estilos del Portal Original */
         header {
             background: var(--primary);
             color: var(--white);
@@ -39,11 +92,7 @@
             text-transform: uppercase;
         }
 
-        header p {
-            margin: 10px 0 0;
-            opacity: 0.8;
-            font-weight: 300;
-        }
+        header p { margin: 10px 0 0; opacity: 0.8; font-weight: 300; }
 
         .container {
             max-width: 1000px;
@@ -76,24 +125,22 @@
             overflow: hidden;
         }
 
-        /* Efecto de vida orgánica al pasar el mouse */
-        .card:hover {
+        /* Estado Bloqueado */
+        .card.locked {
+            opacity: 0.6;
+            cursor: not-allowed;
+            pointer-events: none;
+            filter: grayscale(1);
+        }
+
+        .card:not(.locked):hover {
             transform: translateY(-10px);
             box-shadow: 0 15px 30px rgba(0,0,0,0.1);
             border-color: var(--accent);
         }
 
-        .card h3 {
-            margin: 0 0 10px;
-            font-size: 1.4rem;
-            color: var(--primary);
-        }
-
-        .card p {
-            font-size: 0.9rem;
-            color: #666;
-            margin: 0 0 20px;
-        }
+        .card h3 { margin: 0 0 10px; font-size: 1.4rem; color: var(--primary); }
+        .card p { font-size: 0.9rem; color: #666; margin: 0 0 20px; }
 
         .status {
             font-size: 0.75rem;
@@ -102,29 +149,11 @@
             padding: 5px 12px;
             border-radius: 20px;
             display: inline-block;
+            margin-bottom: 15px;
         }
 
-        .status.active {
-            background-color: #e8f5e9;
-            color: var(--success);
-        }
-
-        .status.upcoming {
-            background-color: #f5f5f5;
-            color: #999;
-        }
-
-        /* Estilo para tarjetas deshabilitadas */
-        .card.disabled {
-            opacity: 0.7;
-            cursor: not-allowed;
-            filter: grayscale(1);
-        }
-
-        .card.disabled:hover {
-            transform: none;
-            border-color: #eee;
-        }
+        .status.active { background-color: #e8f5e9; color: var(--success); }
+        .status.waiting { background-color: #f5f5f5; color: var(--locked); }
 
         footer {
             margin-top: auto;
@@ -134,10 +163,7 @@
             font-size: 0.9rem;
         }
 
-        .brand {
-            font-weight: bold;
-            color: var(--accent);
-        }
+        .brand { font-weight: bold; color: var(--accent); }
 
         @media (max-width: 600px) {
             header h1 { font-size: 1.8rem; }
@@ -147,56 +173,96 @@
 </head>
 <body>
 
-    <header>
-        <h1>Shiatsu Namikoshi</h1>
-        <p>Material de Estudio Oficial - Espacio INYO</p>
-    </header>
-
-    <div class="container">
-        <div class="grid-modulos">
-            
-            <a href="craneo.html" class="card">
-                <span class="status active">Disponible</span>
-                <h3>01. Región Cráneo</h3>
-                <p>Estudio de la línea central y parietal. Protocolo de 3 pasos.</p>
-                <strong>Ver Módulo →</strong>
-            </a>
-
-            <a href="rostro.html" class="card">
-                <span class="status active">Disponible</span>
-                <h3>02. Región Rostro</h3>
-                <p>Tratamiento frontal, nasal, zigomático y orbital.</p>
-                <strong>Ver Módulo →</strong>
-            </a>
-
-            <a href="pecho.html" class="card">
-                <span class="status active">Disponible</span>
-                <h3>03. Región Pecho</h3>
-                <p>Presión intercostal, esternón y asistencia respiratoria.</p>
-                <strong>Ver Módulo →</strong>
-            </a>
-
-            <a href="abdomen.html" class="card">
-                <span class="status active">Disponible</span>
-            <h3>04. Región Abdomen</h3>
-                <p>Protocolo completo de 10 pasos: palmar, pulgares y vibración.</p>
-                <strong>Ver Módulo →</strong>
-            </a>
-
-            <div class="card disabled">
-                <span class="status upcoming">Próximamente</span>
-                <h3>05. Extremidades</h3>
-                <p>Contenido en proceso de desarrollo técnico.</p>
-            </div>
-
+    <div id="lock-screen">
+        <div class="login-box">
+            <h2>Acceso Espacio INYO</h2>
+            <p>Ingresa tu llave de alumno para habilitar los módulos de estudio.</p>
+            <input type="text" id="access-code" placeholder="CÓDIGO AQUÍ">
+            <button class="btn-access" onclick="validateCode()">INGRESAR</button>
+            <p id="error-msg" style="color: #e74c3c; display: none; margin-top: 15px; font-size: 0.9em;">Código incorrecto o vencido.</p>
         </div>
     </div>
 
-    <footer>
-        <p>Desarrollado por <span class="brand">Espacio INYO</span></p>
-        <p>Instructor Gastón Burgos | Carlos Tejedor 335, Lanús</p>
-    </footer>
+    <div id="main-content">
+        <header>
+            <h1>Shiatsu Namikoshi</h1>
+            <p>Material de Estudio Oficial - Espacio INYO</p>
+        </header>
+
+        <div class="container">
+            <div class="grid-modulos">
+                
+                <a href="craneo.html" class="card locked" id="mod-craneo">
+                    <span class="status waiting" id="st-craneo">Bloqueado</span>
+                    <h3>01. Región Cráneo</h3>
+                    <p>Estudio de la línea central y parietal. Protocolo de 3 pasos.</p>
+                    <strong>Acceder →</strong>
+                </a>
+
+                <a href="rostro.html" class="card locked" id="mod-rostro">
+                    <span class="status waiting" id="st-rostro">Bloqueado</span>
+                    <h3>02. Región Rostro</h3>
+                    <p>Tratamiento frontal, nasal, zigomático y orbital.</p>
+                    <strong>Acceder →</strong>
+                </a>
+
+                <a href="pecho.html" class="card locked" id="mod-pecho">
+                    <span class="status waiting" id="st-pecho">Bloqueado</span>
+                    <h3>03. Región Pecho</h3>
+                    <p>Presión intercostal, esternón y asistencia respiratoria.</p>
+                    <strong>Acceder →</strong>
+                </a>
+
+                <a href="abdomen.html" class="card locked" id="mod-abdomen">
+                    <span class="status waiting" id="st-abdomen">Bloqueado</span>
+                    <h3>04. Región Abdomen</h3>
+                    <p>Protocolo completo de 10 pasos: palmar, pulgares y vibración.</p>
+                    <strong>Acceder →</strong>
+                </a>
+
+            </div>
+        </div>
+
+        <footer>
+            <p>Desarrollado por <span class="brand">Espacio INYO</span></p>
+            <p>Instructor Gastón Burgos | Carlos Tejedor 335, Lanús</p>
+        </footer>
+    </div>
+
+    <script>
+        function validateCode() {
+            const code = document.getElementById('access-code').value.toUpperCase().trim();
+            const errorMsg = document.getElementById('error-msg');
+            
+            // --- GESTIÓN DE LLAVES Y PERMISOS QUIRÚRGICOS ---
+            const keys = {
+                "SUPINO26": ["craneo", "rostro", "pecho", "abdomen"], // Llave Módulo Supino Completo
+                "NIVEL1": ["craneo", "rostro"],                      // Llave parcial nivel 1
+                "GASTON-INYO": ["craneo", "rostro", "pecho", "abdomen"], // Tu llave maestra
+                "ABDOMEN-ONLY": ["abdomen"]                          // Llave de prueba
+            };
+
+            if (keys[code]) {
+                const permisos = keys[code];
+                document.getElementById('lock-screen').style.display = 'none';
+                document.getElementById('main-content').style.display = 'flex';
+
+                // Habilitar módulos autorizados
+                permisos.forEach(id => {
+                    const card = document.getElementById('mod-' + id);
+                    const status = document.getElementById('st-' + id);
+                    if (card) {
+                        card.classList.remove('locked');
+                        status.innerText = "Disponible";
+                        status.className = "status active";
+                    }
+                });
+            } else {
+                errorMsg.style.display = 'block';
+                document.getElementById('access-code').value = "";
+            }
+        }
+    </script>
 
 </body>
-  </html>
-  
+</html>
