@@ -102,6 +102,27 @@
 
         .btn-print:active { background-color: var(--accent-color) !important; transform: scale(0.98); }
 
+        /* ESTILO PARA VIDEO RESPONSIVO (PREPARADO) */
+        .video-wrapper {
+            position: relative;
+            padding-bottom: 56.25%;
+            height: 0;
+            overflow: hidden;
+            max-width: 100%;
+            background: #000;
+            border-radius: 12px;
+            margin: 30px 0;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+            border: 2px solid var(--accent-color);
+        }
+        .video-wrapper iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+
         @media print {
             .btn-print { display: none !important; }
             body { background: white; padding: 0; margin: 0; }
@@ -123,6 +144,22 @@
             <h1>Shiatsu Namikoshi</h1>
             <p>Guía de Aplicación: Región Abdomen</p>
         </header>
+
+        <section class="video-masterclass" style="margin-bottom: 50px;">
+            <h2 style="text-align: center; border: none; padding: 0; margin-top: 10px;">Masterclass: Secuencia de Abdomen</h2>
+            <p style="text-align: center; font-size: 0.9em; color: #666; margin-bottom: 20px;">
+                Visualiza el protocolo completo de 10 pasos: desde la presión palmar hasta la vibración final.
+            </p>
+            <div class="video-wrapper">
+                <iframe 
+                    src="https://www.youtube.com/embed/ID_DE_YOUTUBE?rel=0" 
+                    title="Shiatsu Namikoshi - Abdomen" 
+                    frameborder="0" 
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                    allowfullscreen>
+                </iframe>
+            </div>
+        </section>
 
         <section id="proc1">
             <h2>PROCEDIMIENTO 1: Presión Palmar</h2>
@@ -282,5 +319,4 @@
     </div>
 
 </body>
-  </html>
-              
+</html>
