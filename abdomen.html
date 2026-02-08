@@ -1,6 +1,12 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
+    <script>
+        // Guardián de Seguridad: Si no hay acceso autorizado, redirige al index
+        if (sessionStorage.getItem('acceso_inyo') !== 'autorizado') {
+            window.location.href = 'index.html';
+        }
+    </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Módulo Shiatsu Namikoshi - Región Abdomen</title>
