@@ -48,7 +48,7 @@
             box-shadow: 0 15px 30px rgba(0,0,0,0.3);
         }
 
-        input[type="text"] {
+        input[type="text"], input[type="password"] {
             width: 100%;
             padding: 12px;
             margin: 20px 0;
@@ -57,7 +57,6 @@
             box-sizing: border-box;
             font-size: 1.1em;
             text-align: center;
-            text-transform: uppercase;
         }
 
         .btn-access {
@@ -177,7 +176,9 @@
         <div class="login-box">
             <h2>Acceso Espacio INYO</h2>
             <p>Ingresa tu llave de alumno para habilitar los módulos de estudio.</p>
-            <input type="text" id="access-code" placeholder="CÓDIGO AQUÍ">
+            
+            <input type="password" id="access-code" placeholder="CÓDIGO AQUÍ">
+            
             <button class="btn-access" onclick="validateCode()">INGRESAR</button>
             <p id="error-msg" style="color: #e74c3c; display: none; margin-top: 15px; font-size: 0.9em;">Código incorrecto o vencido.</p>
         </div>
