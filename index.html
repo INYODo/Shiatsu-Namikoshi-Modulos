@@ -244,6 +244,8 @@
 
             if (keys[code]) {
                 const permisos = keys[code];
+                // --- LÍNEA DE SEGURIDAD AÑADIDA ---
+                sessionStorage.setItem('acceso_inyo', 'autorizado');
                 document.getElementById('lock-screen').style.display = 'none';
                 document.getElementById('main-content').style.display = 'flex';
 
