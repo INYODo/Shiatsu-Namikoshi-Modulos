@@ -105,6 +105,27 @@
             transform: scale(0.98);
         }
 
+        /* ESTILO PARA VIDEO RESPONSIVO (PREPARADO) */
+        .video-wrapper {
+            position: relative;
+            padding-bottom: 56.25%;
+            height: 0;
+            overflow: hidden;
+            max-width: 100%;
+            background: #000;
+            border-radius: 12px;
+            margin: 30px 0;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+            border: 2px solid var(--accent-color);
+        }
+        .video-wrapper iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+
         @media print {
             .btn-print { display: none !important; }
             body { background: white; padding: 0; margin: 0; }
@@ -127,6 +148,22 @@
             <p>Guía de Aplicación: Región Pecho</p>
         </header>
 
+        <section class="video-masterclass" style="margin-bottom: 50px;">
+            <h2 style="text-align: center; border: none; padding: 0; margin-top: 10px;">Masterclass: Secuencia de Pecho</h2>
+            <p style="text-align: center; font-size: 0.9em; color: #666; margin-bottom: 20px;">
+                Visualiza el trabajo sobre la región intercostal y esternón antes de estudiar la ficha técnica.
+            </p>
+            <div class="video-wrapper">
+                <iframe 
+                    src="https://www.youtube.com/embed/ID_DE_YOUTUBE?rel=0" 
+                    title="Shiatsu Namikoshi - Pecho" 
+                    frameborder="0" 
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                    allowfullscreen>
+                </iframe>
+            </div>
+        </section>
+
         <section id="proc1">
             <h2>PROCEDIMIENTO 1: Región Intercostal</h2>
             <div class="ficha-tecnica">
@@ -145,13 +182,11 @@
             </div>
         </section>
 
-        
-
         <section id="proc2">
             <h2>PROCEDIMIENTO 2: Región Esternón</h2>
             <div class="ficha-tecnica">
                 <div class="ficha-item"><strong>Postura Terapeuta:</strong> Seiza o rodillas frente a la región.</div>
-                <div class="ficha-item"><strong>Tipo de Presión:</strong> Pulgares en "A".</div>
+                <div class="ficha-item"><strong>Tipo de Presión:</strong> Pulgres en "A".</div>
                 <div class="ficha-item"><strong>Número de Puntos:</strong> 5 puntos.</div>
                 <div class="ficha-item"><strong>Línea:</strong> Inf. del manubrio hasta antes del apéndice xifoides.</div>
                 <div class="ficha-item"><strong>Frecuencia:</strong> 3 veces, 3 segundos.</div>
