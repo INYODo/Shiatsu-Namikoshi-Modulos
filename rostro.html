@@ -103,15 +103,14 @@
         /* ESTILO PARA VIDEO RESPONSIVO (PREPARADO) */
         .video-wrapper {
             position: relative;
-            padding-bottom: 56.25%;
+            padding-bottom: 177.77%; /* Proporción 9:16 para videos verticales */
             height: 0;
             overflow: hidden;
-            max-width: 100%;
+            max-width: 350px; /* Ancho ideal para que no se deforme en PC */
+            margin: 0 auto;  /* Centrado automático */
+            border-radius: 15px; /* Bordes redondeados para un look moderno */
+            box-shadow: 0 10px 40px rgba(0,0,0,0.15);
             background: #000;
-            border-radius: 12px;
-            margin: 30px 0;
-            box-shadow: 0 10px 25px rgba(0,0,0,0.2);
-            border: 2px solid var(--accent-color);
         }
         .video-wrapper iframe {
             position: absolute;
