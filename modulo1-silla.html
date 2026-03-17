@@ -10,226 +10,254 @@
     <style>
         h1, h2, h3, .brand-font { font-family: 'Oswald', sans-serif; text-transform: uppercase; }
         body { font-family: 'Lato', sans-serif; background-color: #fdfbf9; color: #2d2d2d; line-height: 1.8; }
-        
         .hero-silla { 
             background: linear-gradient(rgba(20, 20, 20, 0.85), rgba(20, 20, 20, 0.95)), 
             url('https://inyodo.github.io/espacio-inyo-web/imagen/tecnicasautenticas.jpeg'); 
-            background-size: cover; background-position: center; min-height: 60vh;
+            background-size: cover; background-position: center; min-height: 50vh;
         }
-
-        /* Contenedor Video Vertical 9:16 */
         .video-wrapper-vertical {
-            position: relative;
-            padding-bottom: 177.77%; 
-            height: 0;
-            overflow: hidden;
-            max-width: 350px;
-            margin: 0 auto;
-            border-radius: 20px;
-            box-shadow: 0 20px 50px rgba(0,0,0,0.2);
-            background: #000;
+            position: relative; padding-bottom: 177.77%; height: 0; overflow: hidden;
+            max-width: 320px; margin: 0 auto; border-radius: 20px;
+            box-shadow: 0 20px 50px rgba(0,0,0,0.2); background: #000;
         }
-        .video-wrapper-vertical iframe {
-            position: absolute;
-            top: 0; left: 0; width: 100%; height: 100%;
-        }
-
-        .op-card { background: white; border: 1px solid #eee; transition: all 0.3s ease; }
-        .op-card:hover { border-color: #991b1b; box-shadow: 0 10px 30px rgba(0,0,0,0.05); }
-        .img-placeholder { background: #f3f4f6; aspect-ratio: 4/3; display: flex; items-center: center; justify-content: center; border-radius: 8px; overflow: hidden; }
-        
-        .step-badge { background: #991b1b; color: white; padding: 2px 10px; border-radius: 4px; font-size: 10px; font-weight: bold; }
+        .video-wrapper-vertical iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
+        .op-section { border-bottom: 1px solid #eee; padding-bottom: 5rem; margin-bottom: 5rem; }
+        .img-grid { display: grid; gap: 10px; margin-top: 1.5rem; }
+        .img-box { background: #f3f4f6; aspect-ratio: 4/3; border-radius: 8px; overflow: hidden; display: flex; align-items: center; justify-content: center; border: 1px solid #e5e7eb; }
+        .img-box img { width: 100%; height: 100%; object-fit: cover; }
+        .step-badge { background: #991b1b; color: white; padding: 4px 12px; border-radius: 4px; font-size: 11px; font-weight: bold; text-transform: uppercase; letter-spacing: 1px; }
+        .info-box { background: #f9f9f9; border-left: 4px solid #991b1b; padding: 1.5rem; margin-top: 1rem; font-size: 0.9rem; }
     </style>
 </head>
-<body class="antialiased">
+<body class="antialiased italic">
 
     <header class="hero-silla flex flex-col justify-center items-center text-center p-8 text-white">
         <div class="max-w-4xl">
-            <p class="text-red-500 text-xs tracking-[0.6em] mb-4 font-bold uppercase italic">Guía Básica de Formación</p>
-            <h1 class="text-4xl md:text-6xl font-bold mb-6 tracking-tighter italic">NAMIKOSHI SEATED SHIATSU</h1>
-            <p class="text-lg md:text-xl text-stone-300 font-light italic leading-relaxed">
-                "El mayor beneficio del Shiatsu en silla es que puede ser aplicado con relativa facilidad en cualquier lugar".
-            </p>
+            <p class="text-red-500 text-xs tracking-[0.6em] mb-4 font-bold uppercase">Maestría Masaje Japonés</p>
+            <h1 class="text-4xl md:text-6xl font-bold mb-6 tracking-tighter">NAMIKOSHI SEATED SHIATSU</h1>
+            <p class="text-lg text-stone-300 font-light max-w-2xl mx-auto italic">Guía sintética para la práctica de secuencias breves en posición sentado.</p>
         </div>
     </header>
 
-    <section class="py-20 px-6 max-w-4xl mx-auto italic text-stone-700">
-        <div class="grid md:grid-cols-2 gap-12">
-            <div>
-                <h2 class="text-2xl font-bold text-stone-900 mb-6 border-l-4 border-red-900 pl-4">VISIÓN TERAPÉUTICA</h2>
-                <p class="mb-4">No sólo en la vida cotidiana y familiar, sino también en lugares de trabajo donde el estrés y la sedestación prolongada exigen una intervención vital.</p>
-                <p>Útil para prevenir migrañas, fatiga ocular y pesadez de brazos, mejorando el rendimiento intelectual y la vitalidad.</p>
-            </div>
-            <div class="bg-stone-100 p-8 rounded-lg border border-stone-200">
-                <h3 class="text-sm font-bold text-red-900 mb-4 uppercase tracking-widest">Objetivos de la Guía</h3>
-                <ul class="text-xs space-y-3">
-                    <li><i class="fas fa-check mr-2"></i> Tutorizar su propia práctica personal.</li>
-                    <li><i class="fas fa-check mr-2"></i> Esquema fácil de memorizar por regiones.</li>
-                    <li><i class="fas fa-check mr-2"></i> Economizar tiempo y energía en la exploración.</li>
-                    <li><i class="fas fa-check mr-2"></i> Herramienta técnica del Maestro Namikoshi.</li>
-                </ul>
-            </div>
-        </div>
-    </section>
-
-    <section class="py-10 bg-stone-900 text-white">
-        <div class="max-w-4xl mx-auto px-6 text-center">
-            <h2 class="text-3xl font-bold mb-2 italic">VIDEO TÉCNICO COMPLETO</h2>
-            <p class="text-stone-400 text-sm mb-12 italic">Visualización optimizada para dispositivos móviles (9:16)</p>
-            <div class="video-wrapper-vertical">
-                <iframe src="https://www.youtube.com/embed/ID_DEL_VIDEO?rel=0" frameborder="0" allowfullscreen></iframe>
+    <section class="py-20 px-6 max-w-4xl mx-auto">
+        <h2 class="text-3xl font-bold text-stone-900 mb-8 uppercase text-center">Introducción y Objetivos</h2>
+        <div class="space-y-6 text-stone-700 leading-relaxed">
+            <p><strong>El mayor beneficio del Shiatsu en silla es que puede ser aplicado con relativa facilidad en cualquier lugar.</strong> No sólo en la vida cotidiana y familiar, sino también en lugares de trabajo.</p>
+            <p>En estos tiempos de sedestación prolongada y estrés, estas operaciones previenen y palean dolencias articulares, migrañas y fatiga ocular, mejorando la vitalidad y el rendimiento intelectual.</p>
+            <div class="grid md:grid-cols-2 gap-8 mt-12 bg-white p-8 border border-stone-100 shadow-sm">
+                <div>
+                    <h3 class="font-bold text-red-900 mb-4 uppercase text-sm">Objetivos</h3>
+                    <ul class="text-xs space-y-2 list-disc pl-4">
+                        <li>Tutorizar usted mismo su práctica.</li>
+                        <li>Esquema fácil de memorizar.</li>
+                        <li>Economizar tiempo y energía en la exploración.</li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="font-bold text-red-900 mb-4 uppercase text-sm">Posición del Tratamiento</h3>
+                    <p class="text-xs">Paciente relajado, tronco erguido. El terapista debe adaptarse a la altura óptima respetando las leyes ergonómicas de la técnica Namikoshi.</p>
+                </div>
             </div>
         </div>
     </section>
 
-    <main class="py-20 px-6 max-w-6xl mx-auto">
-        <div class="text-center mb-20">
-            <h2 class="text-4xl font-bold text-stone-900 italic uppercase">Procedimientos Técnicos</h2>
-            <p class="text-stone-500 italic">Namikoshi Seated Shiatsu: Operaciones 1 a 12</p>
+    <section class="py-16 bg-stone-900">
+        <div class="video-wrapper-vertical">
+            <iframe src="https://www.youtube.com/embed/ID_DEL_VIDEO?rel=0" frameborder="0" allowfullscreen></iframe>
         </div>
+    </section>
 
-        <div class="space-y-32">
+    <main class="py-32 px-6 max-w-6xl mx-auto">
 
+        <section class="op-section">
             <div class="grid md:grid-cols-2 gap-12 items-start">
                 <div>
                     <span class="step-badge">Operación 1</span>
-                    <h3 class="text-3xl font-bold text-stone-900 mt-2 mb-6 italic">Región cervical anterior</h3>
-                    <div class="space-y-4 text-stone-600 italic text-sm">
-                        <p><strong>Localización:</strong> 4 puntos equidistantes a lo largo del borde interno del SCM.</p>
-                        <p><strong>Dirección:</strong> Hacia las apófisis espinosas de las cervicales.</p>
-                        <p class="bg-white p-4 border-l-2 border-red-900"><strong>Tratamiento:</strong> Terapista de pie, lado anterior. Presión con pulgar durante 3 segundos por punto. Repetir 3 veces por cada lado.</p>
+                    <h3 class="text-3xl font-bold text-stone-900 mt-4 mb-6">Cervical Anterior</h3>
+                    <p class="text-sm"><strong>Puntos:</strong> 4 puntos en el borde interno del SCM.</p>
+                    <p class="text-sm"><strong>Dirección:</strong> Hacia apófisis espinosas cervicales.</p>
+                    <div class="info-box">
+                        <strong>Tratamiento:</strong> Terapista de pie al lado izquierdo anterior. Presión con pulgar derecho mientras los otros dedos sostienen la nuca. 3 segundos por punto. Repetir 3 veces. Luego invertir para el lado derecho.
                     </div>
                 </div>
-                <div class="grid grid-cols-2 gap-2">
-                    <div class="img-placeholder"><img src="imagen/op1-1.png" alt="Op 1"></div>
-                    <div class="img-placeholder"><img src="imagen/op1-2.png" alt="Op 1"></div>
-                    <div class="img-placeholder"><img src="imagen/op1-3.png" alt="Op 1"></div>
-                    <div class="img-placeholder"><img src="imagen/op1-4.png" alt="Op 1"></div>
+                <div class="img-grid grid-cols-2">
+                    <div class="img-box"><img src="imagen/op1-1.png"></div>
+                    <div class="img-box"><img src="imagen/op1-2.png"></div>
+                    <div class="img-box"><img src="imagen/op1-3.png"></div>
+                    <div class="img-box"><img src="imagen/op1-4.png"></div>
                 </div>
             </div>
+        </section>
 
-            <hr class="border-stone-200">
-
+        <section class="op-section">
             <div class="grid md:grid-cols-2 gap-12 items-start">
-                <div class="md:order-last">
-                    <span class="step-badge">Operación 2</span>
-                    <h3 class="text-3xl font-bold text-stone-900 mt-2 mb-6 italic">Región cervical lateral</h3>
-                    <div class="space-y-4 text-stone-600 italic text-sm">
-                        <p><strong>Localización:</strong> 3 puntos desde el proceso mastoides a la base del cuello.</p>
-                        <p><strong>Dirección:</strong> Hacia el cuerpo de las vértebras cervicales.</p>
-                        <p class="bg-white p-4 border-l-2 border-red-900"><strong>Tratamiento:</strong> Mano en frente para sostener, otra en cuello. Presión en forma de pinza simultánea. 3 segundos, 3 veces.</p>
-                    </div>
-                </div>
-                <div class="grid grid-cols-2 gap-2">
-                    <div class="img-placeholder"><img src="imagen/op2-1.png" alt="Op 2"></div>
-                    <div class="img-placeholder"><img src="imagen/op2-2.png" alt="Op 2"></div>
-                    <div class="img-placeholder"><img src="imagen/op2-3.png" alt="Op 2"></div>
-                    <div class="img-placeholder"><img src="imagen/op2-4.png" alt="Op 2"></div>
-                </div>
-            </div>
-
-            <div class="grid md:grid-cols-2 gap-8">
-                <div class="op-card p-6 rounded-lg">
-                    <span class="step-badge">Operación 3</span>
-                    <h4 class="font-bold text-lg my-2 uppercase">Médula Oblonga</h4>
-                    <p class="text-xs text-stone-500 italic mb-4">Fosa de la nuca / Zona suboccipital. Presión hacia el entrecejo (5 segundos).</p>
-                    <div class="img-placeholder h-40"></div>
-                </div>
-                <div class="op-card p-6 rounded-lg">
-                    <span class="step-badge">Operación 4</span>
-                    <h4 class="font-bold text-lg my-2 uppercase">Cervical Posterior</h4>
-                    <p class="text-xs text-stone-500 italic mb-4">3 puntos hacia la tráquea. Tratamiento simultáneo de ambos lados (3 segundos).</p>
-                    <div class="img-placeholder h-40"></div>
-                </div>
-            </div>
-
-            <div class="grid md:grid-cols-2 gap-12 items-center">
                 <div>
-                    <span class="step-badge">Operación 5</span>
-                    <h3 class="text-3xl font-bold text-stone-900 mt-2 mb-4 italic">Región temporal</h3>
-                    <p class="text-sm text-stone-600 italic mb-6">Presión con palmas simultáneas durante 10 segundos. Se puede aplicar presión vibracional según relajación.</p>
-                </div>
-                <div class="grid grid-cols-2 gap-2">
-                    <div class="img-placeholder"></div>
-                    <div class="img-placeholder"></div>
-                </div>
-            </div>
-
-            <div class="bg-white p-8 border border-stone-200 rounded-xl">
-                <span class="step-badge">Operación 6</span>
-                <h3 class="text-3xl font-bold text-stone-900 mt-2 mb-6 italic">Región Supraescapular (Lado Izquierdo / Derecho)</h3>
-                <div class="grid md:grid-cols-3 gap-8 text-sm italic">
-                    <div class="md:col-span-2">
-                        <p class="mb-4"><strong>Puntos:</strong> 3 puntos sobre la línea de hombro (base del cuello a articulación).</p>
-                        <p class="mb-4"><strong>Técnica:</strong> Pulgares superpuestos (derecho debajo). Acompañar con flexión de rodilla y exhalación del paciente.</p>
-                    </div>
-                    <div class="grid grid-cols-2 gap-2">
-                        <div class="img-placeholder"></div>
-                        <div class="img-placeholder"></div>
+                    <span class="step-badge">Operación 2</span>
+                    <h3 class="text-3xl font-bold text-stone-900 mt-4 mb-6">Cervical Lateral</h3>
+                    <p class="text-sm"><strong>Puntos:</strong> 3 puntos desde proceso mastoides a base del cuello.</p>
+                    <div class="info-box">
+                        <strong>Tratamiento:</strong> Mano izquierda en frente sostiene cabeza. Derecha presiona en pinza desde base del cráneo hacia base del cuello. 3 segundos, 3 veces.
                     </div>
                 </div>
+                <div class="img-grid grid-cols-2">
+                    <div class="img-box"><img src="imagen/op2-1.png"></div>
+                    <div class="img-box"><img src="imagen/op2-2.png"></div>
+                    <div class="img-box"><img src="imagen/op2-3.png"></div>
+                    <div class="img-box"><img src="imagen/op2-4.png"></div>
+                </div>
             </div>
+        </section>
 
-            <div class="space-y-12">
-                <div class="border-t pt-12">
-                    <span class="step-badge">Operación 7</span>
-                    <h3 class="text-2xl font-bold uppercase italic mt-2">Trapecio y Movimiento Isquémico</h3>
-                    <p class="text-sm italic text-stone-600 mb-6">Presión simultánea hacia el plexo solar (5 segundos). Movimiento isquémico en 3 tandas de 10 presiones rítmicas.</p>
-                    <div class="flex gap-2 overflow-x-auto pb-4">
-                        <div class="img-placeholder w-40 flex-shrink-0"></div>
-                        <div class="img-placeholder w-40 flex-shrink-0"></div>
-                        <div class="img-placeholder w-40 flex-shrink-0"></div>
+        <section class="op-section grid md:grid-cols-2 gap-12">
+            <div>
+                <span class="step-badge">Operación 3</span>
+                <h3 class="text-2xl font-bold text-stone-900 mt-4">Médula Oblonga</h3>
+                <p class="text-xs mb-4"><strong>Localización:</strong> Fosa de la nuca (suboccipital).</p>
+                <div class="info-box text-xs">
+                    Inclinar cabeza ligeramente hacia atrás. Presión sostenida de 5 segundos hacia el entrecejo. Repetir 3 veces.
+                </div>
+            </div>
+            <div>
+                <span class="step-badge">Operación 4</span>
+                <h3 class="text-2xl font-bold text-stone-900 mt-4">Cervical Posterior</h3>
+                <p class="text-xs mb-4"><strong>Puntos:</strong> 3 puntos hacia la tráquea.</p>
+                <div class="info-box text-xs">
+                    Tratar ambos lados simultáneamente. 3 segundos cada vez. Repetir 3 veces.
+                </div>
+                <div class="img-grid grid-cols-2 mt-4">
+                    <div class="img-box"><img src="imagen/op4-1.png"></div>
+                    <div class="img-box"><img src="imagen/op4-2.png"></div>
+                </div>
+            </div>
+        </section>
+
+        <section class="op-section">
+            <span class="step-badge">Operación 5</span>
+            <h3 class="text-3xl font-bold text-stone-900 mt-4 mb-6 text-center">Región Temporal</h3>
+            <div class="max-w-2xl mx-auto text-center">
+                <p class="text-sm mb-4"><strong>Puntos:</strong> En medio de la región temporal (Músculo temporal).</p>
+                <div class="info-box">
+                    Terapista detrás, alineado. Presión con palmas simultáneas durante 10 segundos. Puede añadir presión vibracional.
+                </div>
+                <div class="img-grid grid-cols-2 mt-8">
+                    <div class="img-box"><img src="imagen/op5-1.png"></div>
+                    <div class="img-box"><img src="imagen/op5-2.png"></div>
+                </div>
+            </div>
+        </section>
+
+        <section class="op-section">
+            <span class="step-badge">Operación 6</span>
+            <h3 class="text-3xl font-bold text-stone-900 mt-4 mb-6 uppercase">Región Supraescapular</h3>
+            <div class="grid md:grid-cols-2 gap-12">
+                <div class="text-sm">
+                    <p><strong>Lado Izquierdo/Derecho:</strong> 3 puntos sobre la línea de hombro.</p>
+                    <div class="info-box">
+                        <strong>Técnica:</strong> Pulgares superpuestos (izquierdo invierte posición). Acompañar con respiración y peso del cuerpo flexionando rodilla. 3 segundos por punto.
                     </div>
                 </div>
-
-                <div class="border-t pt-12">
-                    <span class="step-badge">Operación 8</span>
-                    <h3 class="text-2xl font-bold uppercase italic mt-2">Región Interescapular</h3>
-                    <p class="text-sm italic text-stone-600 mb-6">5 puntos a cada lado entre columna y omóplato. Presión rítmica alternada de arriba hacia abajo.</p>
-                    <div class="img-placeholder h-60 w-full"></div>
+                <div class="img-grid grid-cols-2">
+                    <div class="img-box"><img src="imagen/op6-1.png"></div>
+                    <div class="img-box"><img src="imagen/op6-2.png"></div>
+                    <div class="img-box"><img src="imagen/op6-3.png"></div>
+                    <div class="img-box"><img src="imagen/op6-4.png"></div>
                 </div>
             </div>
+        </section>
 
-            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-                <div class="op-card p-4 rounded text-center">
-                    <span class="text-[10px] font-bold text-red-900">OP 9</span>
-                    <h5 class="font-bold text-xs uppercase my-2">Extensión Tronco</h5>
-                    <div class="img-placeholder h-24 mb-2"></div>
+        <section class="op-section">
+            <span class="step-badge">Operación 7</span>
+            <h3 class="text-3xl font-bold text-stone-900 mt-4 mb-6 uppercase">Trapecio e Isquémico</h3>
+            <div class="grid md:grid-cols-2 gap-12">
+                <div class="text-sm">
+                    <p><strong>Puntos:</strong> Protuberancia del trapecio hacia plexo solar.</p>
+                    <div class="info-box">
+                        <strong>Mov. Isquémico:</strong> Dedos en forma de pinza. Presionar simultánea y rítmicamente en 3 tandas de 10 presiones.
+                    </div>
                 </div>
-                <div class="op-card p-4 rounded text-center">
-                    <span class="text-[10px] font-bold text-red-900">OP 10</span>
-                    <h5 class="font-bold text-xs uppercase my-2">Flexión Hombros</h5>
-                    <div class="img-placeholder h-24 mb-2"></div>
-                </div>
-                <div class="op-card p-4 rounded text-center">
-                    <span class="text-[10px] font-bold text-red-900">OP 11</span>
-                    <h5 class="font-bold text-xs uppercase my-2">Deslizamiento Brazos</h5>
-                    <div class="img-placeholder h-24 mb-2"></div>
-                </div>
-                <div class="op-card p-4 rounded text-center">
-                    <span class="text-[10px] font-bold text-red-900">OP 12</span>
-                    <h5 class="font-bold text-xs uppercase my-2">Procesos Espinosos</h5>
-                    <div class="img-placeholder h-24 mb-2"></div>
+                <div class="img-grid grid-cols-3">
+                    <div class="img-box"><img src="imagen/op7-1.png"></div>
+                    <div class="img-box"><img src="imagen/op7-2.png"></div>
+                    <div class="img-box"><img src="imagen/op7-3.png"></div>
+                    <div class="img-box"><img src="imagen/op7-4.png"></div>
+                    <div class="img-box"><img src="imagen/op7-5.png"></div>
                 </div>
             </div>
+        </section>
 
-        </div>
+        <section class="op-section">
+            <span class="step-badge">Operación 8</span>
+            <h3 class="text-3xl font-bold text-stone-900 mt-4 mb-6 uppercase text-center">Región Interescapular</h3>
+            <div class="max-w-3xl mx-auto">
+                <p class="text-sm text-center mb-6"><strong>Localización:</strong> 5 puntos a cada lado entre columna y omóplato (10 en total).</p>
+                <div class="info-box">
+                    Ejerce presión rítmica alternada de arriba hacia abajo acompañando con el peso del cuerpo. Detenerse más tiempo en el último punto. Repetir 3 veces.
+                </div>
+                <div class="img-grid grid-cols-5 mt-8">
+                    <div class="img-box"><img src="imagen/op8-1.png"></div>
+                    <div class="img-box"><img src="imagen/op8-2.png"></div>
+                    <div class="img-box"><img src="imagen/op8-3.png"></div>
+                    <div class="img-box"><img src="imagen/op8-4.png"></div>
+                    <div class="img-box"><img src="imagen/op8-5.png"></div>
+                </div>
+            </div>
+        </section>
+
+        <section class="op-section grid md:grid-cols-2 gap-12">
+            <div>
+                <span class="step-badge">Operación 9</span>
+                <h3 class="text-2xl font-bold mt-4 uppercase italic">Extensión de Brazos</h3>
+                <p class="text-xs mb-4">Apoyar flanco derecho en columna. Levantar antebrazos describiendo arco amplio hacia atrás.</p>
+                <div class="img-grid grid-cols-3">
+                    <div class="img-box"><img src="imagen/op9-1.png"></div>
+                    <div class="img-box"><img src="imagen/op9-2.png"></div>
+                    <div class="img-box"><img src="imagen/op9-3.png"></div>
+                </div>
+            </div>
+            <div>
+                <span class="step-badge">Operación 10</span>
+                <h3 class="text-2xl font-bold mt-4 uppercase italic">Flexión Articular</h3>
+                <p class="text-xs mb-4">Sostener en deltoides. Elevar hombros y soltarlos por su propio peso al exhalar. Repetir 3 veces.</p>
+                <div class="img-grid grid-cols-2">
+                    <div class="img-box"><img src="imagen/op10-1.png"></div>
+                    <div class="img-box"><img src="imagen/op10-2.png"></div>
+                    <div class="img-box"><img src="imagen/op10-3.png"></div>
+                    <div class="img-box"><img src="imagen/op10-4.png"></div>
+                </div>
+            </div>
+        </section>
+
+        <section class="grid md:grid-cols-2 gap-12 pb-20">
+            <div>
+                <span class="step-badge">Operación 11</span>
+                <h3 class="text-2xl font-bold mt-4 uppercase italic">Deslizamiento Manual</h3>
+                <p class="text-xs mb-4">Tres barridas desde región supraescapular hacia las puntas de los dedos.</p>
+                <div class="img-grid grid-cols-2">
+                    <div class="img-box"><img src="imagen/op11-1.png"></div>
+                    <div class="img-box"><img src="imagen/op11-2.png"></div>
+                    <div class="img-box"><img src="imagen/op11-3.png"></div>
+                    <div class="img-box"><img src="imagen/op11-4.png"></div>
+                </div>
+            </div>
+            <div>
+                <span class="step-badge">Operación 12</span>
+                <h3 class="text-2xl font-bold mt-4 uppercase italic">Procesos Espinosos</h3>
+                <p class="text-xs mb-4">Pasa mano derecha a lo largo de la columna. 3 veces para conectar con calor corporal.</p>
+                <div class="img-grid grid-cols-2">
+                    <div class="img-box"><img src="imagen/op12-1.png"></div>
+                    <div class="img-box"><img src="imagen/op12-2.png"></div>
+                    <div class="img-box"><img src="imagen/op12-3.png"></div>
+                    <div class="img-box"><img src="imagen/op12-4.png"></div>
+                </div>
+            </div>
+        </section>
+
     </main>
 
     <footer class="py-20 bg-stone-900 text-center text-white italic">
-        <p class="text-[10px] tracking-widest text-stone-500 mb-4">CURSO MAESTRÍA MASAJE JAPONÉS</p>
-        <h2 class="text-3xl font-bold mb-8 italic uppercase">ESPACIO INYO ☯️</h2>
-        <a href="https://inyodo.github.io/masaje-japones-/" class="inline-block border border-white px-8 py-3 text-[10px] uppercase font-bold tracking-widest hover:bg-white hover:text-black transition">Volver al Portal</a>
+        <h2 class="text-3xl font-bold mb-8 italic uppercase leading-none">Espacio INYO ☯️</h2>
+        <a href="https://inyodo.github.io/masaje-japones-/" class="inline-block border border-white px-8 py-3 text-[10px] uppercase font-bold tracking-widest hover:bg-white hover:text-black transition">Finalizar Sesión</a>
     </footer>
 
-    <script>
-        // Lógica simple para fade-in
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) entry.target.classList.add('visible');
-            });
-        }, { threshold: 0.1 });
-        document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
-    </script>
 </body>
 </html>
