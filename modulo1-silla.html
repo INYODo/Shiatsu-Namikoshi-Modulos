@@ -22,9 +22,29 @@
         }
         .video-wrapper-vertical iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
         .op-section { border-bottom: 1px solid #eee; padding-bottom: 5rem; margin-bottom: 5rem; }
-        .img-grid { display: grid; gap: 10px; margin-top: 1.5rem; }
-        .img-box { background: #f3f4f6; aspect-ratio: 4/3; border-radius: 8px; overflow: hidden; display: flex; align-items: center; justify-content: center; border: 1px solid #e5e7eb; }
-        .img-box img { width: 100%; height: 100%; object-fit: cover; }
+        .img-grid { display: grid; gap: 15px; margin-top: 1.5rem; }
+        
+        /* CORRECCIÓN QUIRÚRGICA: Contenedor Vertical 3:4 */
+        .img-box { 
+            background: #1a1a1a; /* Fondo oscuro para resaltar la foto */
+            aspect-ratio: 3/4; /* Proporción vertical */
+            border-radius: 12px; 
+            overflow: hidden; 
+            display: flex; 
+            align-items: center; 
+            justify-content: center; 
+            border: 1px solid #e5e7eb;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+        
+        /* CORRECCIÓN QUIRÚRGICA: Imagen Completa sin Recortes */
+        .img-box img { 
+            width: 100%; 
+            height: 100%; 
+            object-fit: contain; /* Ajusta la foto vertical al contenedor */
+            padding: 5px; /* Pequeño aire para el encuadre */
+        }
+        
         .step-badge { background: #991b1b; color: white; padding: 4px 12px; border-radius: 4px; font-size: 11px; font-weight: bold; text-transform: uppercase; letter-spacing: 1px; }
         .info-box { background: #f9f9f9; border-left: 4px solid #991b1b; padding: 1.5rem; margin-top: 1rem; font-size: 0.9rem; }
         .objetivos-box { background: white; padding: 2rem; border: 1px solid #eee; margin-top: 2rem; }
@@ -35,7 +55,7 @@
     <header class="hero-silla flex flex-col justify-center items-center text-center p-8 text-white">
         <div class="max-w-4xl">
             <p class="text-red-500 text-xs tracking-[0.6em] mb-4 font-bold uppercase text-white">GUIA BÁSICA</p>
-            <h1 class="text-4xl md:text-6xl font-bold mb-6 tracking-tighter">NAMIKOSHI SEATED SHIATSU</h1>
+            <h1 class="text-4xl md:text-6xl font-bold mb-6 tracking-tighter text-white">NAMIKOSHI SEATED SHIATSU</h1>
             <h2 class="text-xl md:text-2xl font-bold mb-4 tracking-widest text-white">OPERACIONES BÁSICAS</h2>
         </div>
     </header>
@@ -146,7 +166,9 @@
                         </ul>
                     </div>
                 </div>
-                <div class="img-box h-full"><img src="imagenes/op3.png"></div>
+                <div class="img-grid grid-cols-1 max-w-sm mx-auto">
+                    <div class="img-box h-full"><img src="imagenes/op3.png"></div>
+                </div>
             </div>
         </section>
 
@@ -324,16 +346,18 @@
         </section>
 
         <section class="op-section">
-            <span class="step-badge">OPERACIÓN 11</span>
-            <h3 class="text-3xl font-bold text-stone-900 mt-4 mb-6 uppercase">Deslizamiento de las manos sobre hombros y brazos</h3>
             <div class="grid md:grid-cols-2 gap-12 items-start">
-                <div class="info-box">
-                    <strong>TRATAMIENTO:</strong>
-                    <ul class="space-y-2 mt-2">
-                        <li>• El terapista se para detrás del receptor.</li>
-                        <li>• Apoya sus dos manos en la región supraescapular.</li>
-                        <li>• Desde allí hace tres barridas bajando por los brazos hacia las puntas de los dedos de las manos.</li>
-                    </ul>
+                <div>
+                    <span class="step-badge">OPERACIÓN 11</span>
+                    <h3 class="text-3xl font-bold text-stone-900 mt-4 mb-6 uppercase">Deslizamiento de las manos sobre hombros y brazos</h3>
+                    <div class="info-box">
+                        <strong>TRATAMIENTO:</strong>
+                        <ul class="space-y-2 mt-2">
+                            <li>• El terapista se para detrás del receptor.</li>
+                            <li>• Apoya sus dos manos en la región supraescapular.</li>
+                            <li>• Desde allí hace tres barridas bajando por los brazos hacia las puntas de los dedos de las manos.</li>
+                        </ul>
+                    </div>
                 </div>
                 <div class="img-grid grid-cols-2">
                     <div class="img-box"><img src="imagenes/op11-1.png"></div>
@@ -345,16 +369,18 @@
         </section>
 
         <section class="pb-20">
-            <span class="step-badge">OPERACIÓN 12</span>
-            <h3 class="text-3xl font-bold text-stone-900 mt-4 mb-6 uppercase">Deslizamiento sobre procesos espinosos</h3>
             <div class="grid md:grid-cols-2 gap-12 items-start">
-                <div class="info-box">
-                    <strong>TRATAMIENTO:</strong>
-                    <ul class="space-y-2 mt-2">
-                        <li>• El terapista se para del lado izquierdo del receptor.</li>
-                        <li>• Pasa la mano derecha sobre la zona trabajada, a lo largo de la columna.</li>
-                        <li>• Repite 3 veces, conectándose con el calor corporal.</li>
-                    </ul>
+                <div>
+                    <span class="step-badge">OPERACIÓN 12</span>
+                    <h3 class="text-3xl font-bold text-stone-900 mt-4 mb-6 uppercase">Deslizamiento sobre procesos espinosos</h3>
+                    <div class="info-box">
+                        <strong>TRATAMIENTO:</strong>
+                        <ul class="space-y-2 mt-2">
+                            <li>• El terapista se para del lado izquierdo del receptor.</li>
+                            <li>• Pasa la mano derecha sobre la zona trabajada, a lo largo de la columna.</li>
+                            <li>• Repite 3 veces, conectándose con el calor corporal.</li>
+                        </ul>
+                    </div>
                 </div>
                 <div class="img-grid grid-cols-2">
                     <div class="img-box"><img src="imagenes/op12-1.png"></div>
@@ -369,7 +395,7 @@
 
     <footer class="py-20 bg-stone-900 text-center text-white italic text-white">
         <h2 class="text-3xl font-bold mb-8 uppercase tracking-tighter">Espacio INYO ☯️</h2>
-        <a href="https://inyodo.github.io/masaje-japones-/" class="inline-block border border-white px-8 py-3 text-[10px] uppercase font-bold tracking-widest hover:bg-white hover:text-stone-900 transition">Regresar al Portal</a>
+        <a href="https://inyodo.github.io/masaje-japones-/" class="inline-block border border-white px-8 py-3 text-[10px] uppercase font-bold tracking-widest hover:bg-white hover:text-stone-900 transition text-white">Regresar al Portal</a>
     </footer>
 
 </body>
