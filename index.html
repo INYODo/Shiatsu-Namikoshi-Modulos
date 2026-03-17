@@ -25,7 +25,6 @@
             min-height: 100vh;
         }
 
-        /* Pantalla de Bloqueo Quirúrgica */
         #lock-screen {
             position: fixed;
             top: 0; left: 0; width: 100%; height: 100%;
@@ -75,7 +74,6 @@
 
         #main-content { display: none; }
 
-        /* Estilos del Portal Original */
         header {
             background: var(--primary);
             color: var(--white);
@@ -124,7 +122,6 @@
             overflow: hidden;
         }
 
-        /* Estado Bloqueado */
         .card.locked {
             opacity: 0.6;
             cursor: not-allowed;
@@ -176,9 +173,7 @@
         <div class="login-box">
             <h2>Acceso Espacio INYO</h2>
             <p>Ingresa tu llave de alumno para habilitar los módulos de estudio.</p>
-            
             <input type="password" id="access-code" placeholder="CÓDIGO AQUÍ">
-            
             <button class="btn-access" onclick="validateCode()">INGRESAR</button>
             <p id="error-msg" style="color: #e74c3c; display: none; margin-top: 15px; font-size: 0.9em;">Código incorrecto o vencido.</p>
         </div>
@@ -192,6 +187,13 @@
 
         <div class="container">
             <div class="grid-modulos">
+
+                <a href="modulo1-silla.html" class="card locked" id="mod-silla">
+                    <span class="status waiting" id="st-silla">Bloqueado</span>
+                    <h3>00. Namikoshi Seated Shiatsu</h3>
+                    <p>Módulo 1: Silla, Zafu y Seiza. 12 operaciones básicas.</p>
+                    <strong>Acceder →</strong>
+                </a>
                 
                 <a href="craneo.html" class="card locked" id="mod-craneo">
                     <span class="status waiting" id="st-craneo">Bloqueado</span>
@@ -235,22 +237,20 @@
             const code = document.getElementById('access-code').value.toUpperCase().trim();
             const errorMsg = document.getElementById('error-msg');
             
-            // --- GESTIÓN DE LLAVES Y PERMISOS QUIRÚRGICOS ---
             const keys = {
-                "SUPINO26": ["craneo", "rostro", "pecho", "abdomen"], // Llave Módulo Supino Completo
-                "NIVEL1": ["craneo", "rostro"],                      // Llave parcial nivel 1
-                "GASTON-INYO": ["craneo", "rostro", "pecho", "abdomen"], // Tu llave maestra
-                "ABDOMEN-ONLY": ["abdomen"]                          // Llave de prueba
+                "SILLA26": ["silla"], // Nueva llave Módulo 1
+                "SUPINO26": ["craneo", "rostro", "pecho", "abdomen"], 
+                "NIVEL1": ["craneo", "rostro"],
+                "GASTON-INYO": ["silla", "craneo", "rostro", "pecho", "abdomen"], // Llave maestra actualizada
+                "ABDOMEN-ONLY": ["abdomen"]
             };
 
             if (keys[code]) {
                 const permisos = keys[code];
-                // --- LÍNEA DE SEGURIDAD AÑADIDA ---
                 sessionStorage.setItem('acceso_inyo', 'autorizado');
                 document.getElementById('lock-screen').style.display = 'none';
                 document.getElementById('main-content').style.display = 'flex';
 
-                // Habilitar módulos autorizados
                 permisos.forEach(id => {
                     const card = document.getElementById('mod-' + id);
                     const status = document.getElementById('st-' + id);
@@ -266,6 +266,5 @@
             }
         }
     </script>
-
 </body>
 </html>
