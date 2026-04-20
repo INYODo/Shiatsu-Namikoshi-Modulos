@@ -3,75 +3,89 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GUIA PRACTICA KIHON SHIATSU NIVEL II | Espacio INYO</title>
+    <title>Módulo 2: Decúbito Lateral | Gastón Burgos - Espacio INYO</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
     <style>
-        h1, h2, h3 { font-family: 'Oswald', sans-serif; text-transform: uppercase; }
+        h1, h2, h3, .brand-font { font-family: 'Oswald', sans-serif; text-transform: uppercase; }
         body { font-family: 'Lato', sans-serif; background-color: #fdfbf9; color: #2d2d2d; line-height: 1.8; }
-        .hero-title { 
-            background: #1a1a1a; color: white; padding: 4rem 2rem; text-align: center;
-            border-bottom: 5px solid #991b1b;
+        .hero-lateral { 
+            background: linear-gradient(rgba(20, 20, 20, 0.85), rgba(20, 20, 20, 0.95)), 
+            url('https://inyodo.github.io/espacio-inyo-web/imagen/tecnicasautenticas.jpeg'); 
+            background-size: cover; background-position: center; min-height: 60vh;
         }
-        .img-container { background: #f0f0f0; border: 1px solid #ddd; border-radius: 4px; overflow: hidden; margin: 1rem 0; }
+        .video-wrapper-vertical {
+            position: relative; padding-bottom: 177.77%; height: 0; overflow: hidden;
+            max-width: 320px; margin: 0 auto; border-radius: 20px;
+            box-shadow: 0 20px 50px rgba(0,0,0,0.2); background: #000;
+        }
+        .video-wrapper-vertical iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
+        .img-container { background: #fff; border: 1px solid #eee; border-radius: 4px; overflow: hidden; margin: 1rem 0; box-shadow: 0 4px 10px rgba(0,0,0,0.05); }
         .img-container img { width: 100%; height: auto; display: block; }
-        .instruction-block { border-left: 4px solid #991b1b; padding-left: 1.5rem; margin: 2rem 0; }
-        .kamae-section { background: white; padding: 2rem; border: 1px solid #eee; margin-bottom: 3rem; }
-        .mencion { font-size: 0.9rem; font-style: italic; color: #555; margin-top: 0.5rem; }
-        .badge { background: #991b1b; color: white; padding: 2px 10px; font-size: 12px; font-weight: bold; border-radius: 2px; }
+        .instruction-block { border-left: 4px solid #991b1b; padding-left: 1.5rem; margin: 2rem 0; font-size: 0.95rem; }
+        .kamae-section { background: white; padding: 2rem; border: 1px solid #eee; margin-bottom: 2rem; }
+        .mencion { font-size: 0.85rem; font-style: italic; color: #666; margin-top: 0.5rem; display: block; }
+        .badge { background: #991b1b; color: white; padding: 2px 12px; font-size: 11px; font-weight: bold; border-radius: 2px; display: inline-block; }
     </style>
 </head>
-<body class="antialiased">
+<body class="antialiased italic">
 
-    <header class="hero-title">
-        <h1 class="text-3xl md:text-5xl font-bold tracking-tighter mb-4">GUIA PRACTICA KIHON SHIATSU NIVEL II</h1>
-        <p class="text-red-500 uppercase tracking-widest font-bold">Protocolo Profesional de Aplicación</p>
+    <header class="hero-lateral flex flex-col justify-center items-center text-center p-8 text-white">
+        <div class="max-w-4xl">
+            <p class="text-red-500 text-xs tracking-[0.6em] mb-4 font-bold uppercase text-white">FORMACIÓN PROFESIONAL</p>
+            <h1 class="text-4xl md:text-6xl font-bold mb-4 tracking-tighter text-white">GUIA PRACTICA KIHON SHIATSU NIVEL II</h1>
+            <h2 class="text-xl md:text-2xl font-bold tracking-widest text-white">DECÚBITO LATERAL</h2>
+        </div>
     </header>
 
-    <main class="max-w-4xl mx-auto py-16 px-6">
+    <main class="max-w-5xl mx-auto py-20 px-6">
 
-        <section class="mb-20">
-            <h2 class="text-3xl font-bold mb-6 italic">KAMAE</h2>
+        <section class="mb-24">
+            <h2 class="text-3xl font-bold mb-8 italic">KAMAE</h2>
             <p class="mb-10 text-lg">Kamae hace referencia a la postura a tomar por el terapeuta para aplicar el método requerido e indicado según la posición del paciente. Para este nivel necesitaremos abordar mediante Zen Stretching y Taiso, la capacidad de utilizar los Kamae a modo de evitar cansancio físico. También para que el desarrollo de la terapia sea eficiente y el paciente reciba de manera gentil y elegante la aplicación Shiatsu.</p>
 
-            <div class="kamae-section">
-                <h3 class="text-xl font-bold">SEIZA 正座</h3>
-                <p>La forma de sentarse correctamente</p>
-                <div class="img-container max-w-sm mx-auto">
-                    <img src="imagenes/lat-1.png" alt="Foto 1 Seiza">
+            <div class="space-y-8">
+                <div class="kamae-section">
+                    <h3 class="text-xl font-bold">SEIZA 正座</h3>
+                    <p>La forma de sentarse correctamente</p>
+                    <div class="max-w-sm"><div class="img-container"><img src="imagenes/lat-1.png"></div></div>
                 </div>
-            </div>
 
-            <div class="kamae-section">
-                <h3 class="text-xl font-bold">KIZA 跪座</h3>
-                <p>La forma de sentarse de rodillas</p>
-                <div class="img-container max-w-sm mx-auto">
-                    <img src="imagenes/lat-2.png" alt="Foto 2 Kiza">
+                <div class="kamae-section">
+                    <h3 class="text-xl font-bold">KIZA 跪座</h3>
+                    <p>La forma de sentarse de rodillas</p>
+                    <div class="max-w-sm"><div class="img-container"><img src="imagenes/lat-2.png"></div></div>
+                    <span class="mencion">Similar a Seiza, se disponen los dedos de ambos pies para movilizarse.</span>
                 </div>
-                <p class="mencion">Similar a Seiza, se disponen los dedos de ambos pies para movilizarse</p>
-            </div>
 
-            <div class="kamae-section">
-                <h3 class="text-xl font-bold">KATAHIZA 片膝</h3>
-                <p>La forma de una rodilla.</p>
-                <div class="grid grid-cols-2 gap-4">
-                    <div class="img-container"><img src="imagenes/lat-3.png" alt="Foto 3 Katahiza"></div>
-                    <div class="img-container"><img src="imagenes/lat-4.png" alt="Foto 4 Katahiza"></div>
+                <div class="kamae-section">
+                    <h3 class="text-xl font-bold">KATAHIZA 片膝</h3>
+                    <p>La forma de una rodilla.</p>
+                    <div class="grid grid-cols-2 gap-4 max-w-2xl">
+                        <div class="img-container"><img src="imagenes/lat-3.png"></div>
+                        <div class="img-container"><img src="imagenes/lat-4.png"></div>
+                    </div>
+                    <span class="mencion">Generalmente esta postura es llamada en occidente como postura BASICA. Este nombre no es utilizado en Japón. En las imágenes si puede observar que la rodilla que tiene contacto con el tatami, dispone el pie tanto de manera dorsal (empeine) como plantar (pulpejo de los dedos del pie). Estas posiciones del pie retrasado varían dependiendo de la movilidad del terapeuta, lo utiliza para pasar de una región a otra de manera fluida por el suelo (Suwari).</span>
                 </div>
-                <p class="mencion">Generalmente esta postura es llamada en occidente como postura BASICA. Este nombre no es utilizado en Japón. En las imágenes si puede observar que la rodilla que tiene contacto con el tatami, dispone el pie tanto de manera dorsal (empeine) como plantar (pulpejo de los dedos del pie). Estas posiciones del pie retrasado varían dependiendo de la movilidad del terapeuta, lo utiliza para pasar de una región a otra de manera fluida por el suelo (Suwari)</p>
             </div>
         </section>
 
-        <h2 class="text-3xl font-bold mb-10 italic border-b-2 border-stone-800 pb-2">DECÚBITO LATERAL</h2>
-
-        <section class="mb-20">
-            <span class="badge">PASO 1</span>
-            <h3 class="text-2xl font-bold mt-4">1. REGIÓN CERVICAL ANTERIOR</h3>
-            <div class="instruction-block">
-                <p class="text-sm">Generalmente esta postura es llamada en occidente como postura BASICA. Este nombre no es utilizado en Japón. En las imágenes si puede observar que la rodilla que tiene contacto con el tatami, dispone el pie tanto de manera dorsal (empeine) como plantar (pulpejo de los dedos del pie). Estas posiciones del pie retrasado varían dependiendo de la movilidad del terapeuta, lo utiliza para pasar de una región a otra de manera fluida por el suelo (Suwari)</p>
+        <section class="py-20 bg-stone-900 mb-24 rounded-3xl shadow-2xl">
+            <div class="video-wrapper-vertical">
+                <iframe src="https://www.youtube.com/embed/sUerVtqAPdw?rel=0" frameborder="0" allowfullscreen></iframe>
             </div>
-            <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
+        </section>
+
+        <h2 class="text-4xl font-bold mb-12 italic border-b-4 border-red-900 inline-block">PROCEDIMIENTO</h2>
+
+        <section class="mb-24">
+            <span class="badge mb-4">PASO 1</span>
+            <h3 class="text-2xl font-bold uppercase">1. REGIÓN CERVICAL ANTERIOR</h3>
+            <div class="instruction-block">
+                <p>Generalmente esta postura es llamada en occidente como postura BASICA. Este nombre no es utilizado en Japón. En las imágenes si puede observar que la rodilla que tiene contacto con el tatami, dispone el pie tanto de manera dorsal (empeine) como plantar (pulpejo de los dedos del pie). Estas posiciones del pie retrasado varían dependiendo de la movilidad del terapeuta, lo utiliza para pasar de una región a otra de manera fluida por el suelo (Suwari)</p>
+            </div>
+            <div class="grid grid-cols-2 md:grid-cols-5 gap-3">
                 <div class="img-container"><img src="imagenes/lat-5.png"></div>
                 <div class="img-container"><img src="imagenes/lat-6.png"></div>
                 <div class="img-container"><img src="imagenes/lat-7.png"></div>
@@ -80,31 +94,29 @@
             </div>
         </section>
 
-        <section class="mb-20">
-            <span class="badge">PASO 2</span>
-            <h3 class="text-2xl font-bold mt-4">2. REGIÓN CERVICAL LATERAL</h3>
+        <section class="mb-24">
+            <span class="badge mb-4">PASO 2</span>
+            <h3 class="text-2xl font-bold uppercase">2. REGIÓN CERVICAL LATERAL</h3>
             <div class="instruction-block">
-                <p>。<strong>Postura del paciente:</strong> Lateral, brazo superior del paciente estirado sobre el cuerpo.</p>
-                <p>。<strong>Postura del terapeuta:</strong> KATAHIZA 片膝 (Básica), medio paso adelante.</p>
-                <p><strong>Tipo de presión:</strong> Pulgar sobre pulgar. Pulgar derecho debajo (el pulgar izquierdo debajo en el lado derecho).</p>
-                <p><strong>Número de puntos:</strong> 4</p>
-                <p><strong>Dirección de la línea:</strong> Debajo del proceso mastoideo hacia la base del cuello. <strong>Dirección de la presión:</strong> Perpendicular.</p>
+                <p>。Postura del paciente: Lateral, brazo superior del paciente estirado sobre el cuerpo.</p>
+                <p>。Postura del terapeuta: KATAHIZA 片膝 (Básica), medio paso adelante.</p>
+                <p>Tipo de presión: Pulgar sobre pulgar. Pulgar derecho debajo (el pulgar izquierdo debajo en el lado derecho).</p>
+                <p>Número de puntos: 4</p>
+                <p>Dirección de la línea: Debajo del proceso mastoideo hacia la base del cuello. Dirección de la presión: Perpendicular.</p>
                 <p>3 veces, 3 segundos cada una.</p>
             </div>
-            <div class="img-container max-w-lg mx-auto">
-                <img src="imagenes/lat-10.png" alt="Ilustración Cervical Lateral">
-            </div>
+            <div class="max-w-xl"><div class="img-container"><img src="imagenes/lat-10.png"></div></div>
         </section>
 
-        <section class="mb-20">
-            <span class="badge">PASO 3</span>
-            <h3 class="text-2xl font-bold mt-4">3. REGIÓN BULBO RAQUÍDEO</h3>
+        <section class="mb-24">
+            <span class="badge mb-4">PASO 3</span>
+            <h3 class="text-2xl font-bold uppercase">3. REGIÓN BULBO RAQUÍDEO</h3>
             <div class="instruction-block">
-                <p>。<strong>Postura del paciente:</strong> Lateral, brazo superior del paciente semi estirado sobre el cuerpo.</p>
-                <p>。<strong>Postura del terapeuta:</strong> KATAHIZA 片膝 (Básica), sosteniendo ligeramente la frente del paciente con la palma de su mano izquierda, tras girar ligeramente la cabeza, coloca su pulgar derecho dirigido hacia el entrecejo, sobre la región del bulbo raquídeo.</p>
-                <p><strong>Tipo de presión:</strong> Un sólo pulgar (derecho).</p>
-                <p><strong>Localización:</strong> Directamente bajo la protuberancia occipital externa.</p>
-                <p><strong>Dirección de la presión:</strong> Hacia el entrecejo.</p>
+                <p>。Postura del paciente: Lateral, brazo superior del paciente semi estirado sobre el cuerpo.</p>
+                <p>。Postura del terapeuta: KATAHIZA 片膝 (Básica), sosteniendo ligeramente la frente del paciente con la palma de su mano izquierda, tras girar ligeramente la cabeza, coloca su pulgar derecho dirigido hacia el entrecejo, sobre la región del bulbo raquídeo.</p>
+                <p>Tipo de presión: Un sólo pulgar (derecho).</p>
+                <p>Localización: Directamente bajo la protuberancia occipital externa.</p>
+                <p>Dirección de la presión: Hacia el entrecejo.</p>
                 <p>Repite 3 veces, 5 segundos cada una</p>
             </div>
             <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
@@ -114,47 +126,47 @@
             </div>
         </section>
 
-        <section class="mb-20">
-            <span class="badge">PASO 4</span>
-            <h3 class="text-2xl font-bold mt-4">4. REGIÓN CERVICAL POSTERIOR</h3>
+        <section class="mb-24">
+            <span class="badge mb-4">PASO 4</span>
+            <h3 class="text-2xl font-bold uppercase">4. REGIÓN CERVICAL POSTERIOR</h3>
             <div class="instruction-block">
-                <p>。 <strong>Postura del paciente:</strong> Lateral, antebrazo de arriba del paciente sobre el suelo.</p>
-                <p>。 <strong>Postura del terapeuta:</strong> KATAHIZA 片膝 (Básica).</p>
-                <p><strong>Tipo de presión:</strong> Pulgar sobre pulgar. Pulgar derecho debajo. (El pulgar izquierdo debajo en el lado derecho)</p>
-                <p><strong>Número de puntos:</strong> 4</p>
-                <p><strong>Dirección de la línea:</strong> Desde el punto situado entre 1º punto Cervical lateral y bulbo, hacia la base del cuello.</p>
-                <p><strong>Dirección de la presión:</strong> Hacia la tráquea. Repite 3 veces, 3 segundos cada una.</p>
+                <p>。 Postura del paciente: Lateral, antebrazo de arriba del paciente sobre el suelo.</p>
+                <p>。 Postura del terapeuta: KATAHIZA 片膝 (Básica).</p>
+                <p>Tipo de presión: Pulgar sobre pulgar. Pulgar derecho debajo. (El pulgar izquierdo debajo en el lado derecho)</p>
+                <p>Número de puntos: 4</p>
+                <p>Dirección de la línea: Desde el punto situado entre 1º punto Cervical lateral y bulbo, hacia la base del cuello.</p>
+                <p>Dirección de la presión: Hacia la tráquea. Repite 3 veces, 3 segundos cada una.</p>
             </div>
         </section>
 
-        <section class="mb-20">
-            <span class="badge">PASO 5</span>
-            <h3 class="text-2xl font-bold mt-4">5. REGIÓN SUPRAESCAPULAR</h3>
+        <section class="mb-24">
+            <span class="badge mb-4">PASO 5</span>
+            <h3 class="text-2xl font-bold uppercase">5. REGIÓN SUPRAESCAPULAR</h3>
             <div class="instruction-block">
-                <p>。 <strong>Postura del paciente:</strong> Lateral, antebrazo izquierdo sobre el suelo, el tronco debe inclinarse hacia delante para formar con el suelo un ángulo de 60°.</p>
-                <p>。 <strong>Postura del terapeuta:</strong> KATAHIZA 片膝 (Básica), se desplaza hacia la coronilla de la cabeza del paciente, rodilla izquierda alzada y derecha sobre el suelo.</p>
-                <p><strong>Tipo de presión:</strong> Pulgar sobre pulgar. *El pulgar izquierdo debajo en el lado izquierdo.</p>
-                <p><strong>Número de puntos:</strong> 1.</p>
-                <p><strong>Localización:</strong> Dos dedos en lateral desde la base del cuello; anteroinferior del músculo trapecio encima del músculo angular del omóplato</p>
-                <p><strong>Dirección de la presión:</strong> Hacia el centro del tronco a la altura de la apófisis espinosa de la 7D.</p>
+                <p>。 Postura del paciente: Lateral, antebrazo izquierdo sobre el suelo, el tronco debe inclinarse hacia delante para formar con el suelo un ángulo de 60°.</p>
+                <p>。 Postura del terapeuta: KATAHIZA 片膝 (Básica), se desplaza hacia la coronilla de la cabeza del paciente, rodilla izquierda alzada y derecha sobre el suelo.</p>
+                <p>Tipo de presión: Pulgar sobre pulgar. *El pulgar izquierdo debajo en el lado izquierdo.</p>
+                <p>Número de puntos: 1.</p>
+                <p>Localización: Dos dedos en lateral desde la base del cuello; anteroinferior del músculo trapecio encima del músculo angular del omóplato</p>
+                <p>Dirección de la presión: Hacia el centro del tronco a la altura de la apófisis espinosa de la 7D.</p>
                 <p>3 veces, 5 segundos cada una</p>
             </div>
-            <div class="grid grid-cols-2 gap-4">
+            <div class="grid grid-cols-2 gap-4 max-w-2xl">
                 <div class="img-container"><img src="imagenes/lat-14.png"></div>
                 <div class="img-container"><img src="imagenes/lat-15.png"></div>
             </div>
         </section>
 
-        <section class="mb-20">
-            <span class="badge">PASO 6</span>
-            <h3 class="text-2xl font-bold mt-4">6. REGIÓN INTERESCAPULAR</h3>
+        <section class="mb-24">
+            <span class="badge mb-4">PASO 6</span>
+            <h3 class="text-2xl font-bold uppercase">6. REGIÓN INTERESCAPULAR</h3>
             <div class="instruction-block">
-                <p>。<strong>Postura del paciente:</strong> Lateral, antebrazo izquierdo sobre el suelo.</p>
-                <p>。<strong>Postura del terapeuta:</strong> SEIZA 正座, frente a la zona a presionar.</p>
-                <p><strong>Tipo de presión:</strong> Pulgar sobre pulgar. El pulgar derecho debajo. En el lado derecho pulgar izquierdo debajo.</p>
-                <p><strong>Número de puntos:</strong> 5.</p>
-                <p><strong>Dirección de la línea:</strong> Desde el 1° punto entre D1 y D2 hasta el 5° punto entre D7 y D8, en el borde interior del músculo paravertebral.</p>
-                <p><strong>Dirección de la presión:</strong> Perpendicular.</p>
+                <p>。Postura del paciente: Lateral, antebrazo izquierdo sobre el suelo.</p>
+                <p>。Postura del terapeuta: SEIZA 正座, frente a la zona a presionar.</p>
+                <p>Tipo de presión: Pulgar sobre pulgar. El pulgar derecho debajo. En el lado derecho pulgar izquierdo debajo.</p>
+                <p>Número de puntos: 5.</p>
+                <p>Dirección de la línea: Desde el 1° punto entre D1 y D2 hasta el 5° punto entre D7 y D8, en el borde interior del músculo paravertebral.</p>
+                <p>Dirección de la presión: Perpendicular.</p>
                 <p>3 veces, 3 segundos cada una</p>
             </div>
             <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
@@ -164,16 +176,16 @@
             </div>
         </section>
 
-        <section class="mb-20">
-            <span class="badge">PASO 7</span>
-            <h3 class="text-2xl font-bold mt-4">7. REGIÓN INFRAESCAPULAR Y LUMBAR</h3>
+        <section class="mb-24">
+            <span class="badge mb-4">PASO 7</span>
+            <h3 class="text-2xl font-bold uppercase">7. REGIÓN INFRAESCAPULAR Y LUMBAR</h3>
             <div class="instruction-block">
-                <p>。<strong>Postura del paciente:</strong> Lateral, antebrazo izquierdo sobre el suelo.</p>
-                <p>。 <strong>Postura del terapeuta:</strong> KATAHIZA 片膝 (Básica), frente a la zona a presionar.</p>
-                <p><strong>Tipo de presión:</strong> Pulgar sobre pulgar. El pulgar derecho debajo (en lado derecho pulgar izquierdo debajo).</p>
-                <p><strong>Número de puntos:</strong> 10.</p>
-                <p><strong>Dirección de la línea:</strong> Desde el 5° punto de la interescapular hasta el 10° punto (entre L5 y sacro), en el borde interior del músculo paravertebral.</p>
-                <p><strong>Dirección de la presión:</strong> Perpendicular. 3 veces. 3 segundos cada una. * En la tercera vez el 10° punto se presiona fuerte 5 segundos 3 veces cada una.</p>
+                <p>。Postura del paciente: Lateral, antebrazo izquierdo sobre el suelo.</p>
+                <p>。 Postura del terapeuta: KATAHIZA 片膝 (Básica), frente a la zona a presionar.</p>
+                <p>Tipo de presión: Pulgar sobre pulgar. El pulgar derecho debajo (en lado derecho pulgar izquierdo debajo).</p>
+                <p>Número de puntos: 10.</p>
+                <p>Dirección de la línea: Desde el 5° punto de la interescapular hasta el 10° punto (entre L5 y sacro), en el borde interior del músculo paravertebral.</p>
+                <p>Dirección de la presión: Perpendicular. 3 veces. 3 segundos cada una. * En la tercera vez el 10° punto se presiona fuerte 5 segundos 3 veces cada una.</p>
             </div>
             <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
                 <div class="img-container"><img src="imagenes/lat-19.png"></div>
@@ -182,18 +194,17 @@
             </div>
         </section>
 
-        <section class="mb-20">
-            <span class="badge">PASO 8</span>
-            <h3 class="text-2xl font-bold mt-4">8. REGIÓN INFRAESCAPULAR Y LUMBAR (PALMAR)</h3>
+        <section class="mb-24">
+            <span class="badge mb-4">PASO 8</span>
+            <h3 class="text-2xl font-bold uppercase">8. REGIÓN INFRAESCAPULAR Y LUMBAR (Maniobra presión y estimulación palmar)</h3>
             <div class="instruction-block">
-                <p>。 <strong>Postura del paciente:</strong> Lateral, antebrazo izquierdo sobre el suelo.</p>
-                <p>。 <strong>Postura del terapeuta:</strong> KATAHIZA 片膝 (Básica), cercana a las nalgas.</p>
-                <p><strong>Tipo de presión:</strong> Palmar una sola mano. Coloca la mano izquierda sobre la cadera izquierda y presiona con la mano derecha. En el lado derecho al revés.</p>
-                <p><strong>Número de puntos:</strong> 4.</p>
-                <p><strong>Dirección de la linea:</strong> Desde interescapular hacia L5, sobre el músculo paravertebral. La estimulación se realiza en la misma zona que las presiones y con la misma mano.</p>
-                <p><strong>Dirección de la presión:</strong> Perpendicular. <strong>Presión palmar:</strong> 2 veces, 3 segundos cada una.</p>
-                <p><strong>Estimulación:</strong> 2 veces. Barrida con la palma de la mano de manera gentil, sobre la línea paravertebral desde la región escapular hacia la región lumbosacra.</p>
-                <p class="font-bold text-red-900 mt-4">* Terminado el lado izquierdo se procede a repetir la secuencia del lado derecho</p>
+                <p>。 Postura del paciente: Lateral, antebrazo izquierdo sobre el suelo.</p>
+                <p>。 Postura del terapeuta: KATAHIZA 片膝 (Básica), cercana a las nalgas.</p>
+                <p>Tipo de presión: Palmar una sola mano. Coloca la mano izquierda sobre la cadera izquierda y presiona con la mano derecha. En el lado derecho al revés.</p>
+                <p>Número de puntos: 4.</p>
+                <p>Dirección de la linea: Desde interescapular hacia L5, sobre el músculo paravertebral. La estimulación se realiza en la misma zona que las presiones y con la misma mano.</p>
+                <p>Dirección de la presión: Perpendicular. Presión palmar: 2 veces, 3 segundos cada una. Estimulación: 2 veces. Barrida con la palma de la mano de manera gentil, sobre la línea paravertebral desde la región escapular hacia la región lumbosacra.</p>
+                <p class="font-bold text-red-900 mt-4">*Terminado el lado izquierdo se procede a repetir la secuencia del lado derecho</p>
             </div>
             <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
                 <div class="img-container"><img src="imagenes/lat-22.png"></div>
@@ -204,8 +215,9 @@
 
     </main>
 
-    <footer class="bg-stone-900 text-white py-12 text-center">
-        <p class="uppercase tracking-[0.5em] text-sm">Espacio INYO</p>
+    <footer class="bg-stone-900 text-white py-12 text-center italic">
+        <p class="uppercase tracking-[0.5em] text-sm">Espacio INYO &copy; 2026</p>
+        <p class="text-[10px] text-stone-500 mt-4 uppercase">Instructor Gastón Burgos</p>
     </footer>
 
 </body>
