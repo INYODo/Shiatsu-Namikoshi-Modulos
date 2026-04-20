@@ -21,34 +21,26 @@
             box-shadow: 0 20px 50px rgba(0,0,0,0.2); background: #000;
         }
         .video-wrapper-vertical iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
-        .img-grid { display: grid; gap: 12px; margin-top: 1rem; }
         .img-box { width: 100%; border-radius: 8px; overflow: hidden; border: 1px solid #eee; background: white; }
-        .img-box img { width: 100%; height: auto; display: block; object-fit: cover; object-position: top; }
+        .img-box img { width: 100%; height: auto; display: block; }
         .op-section { border-bottom: 1px solid #eee; padding-bottom: 4rem; margin-bottom: 4rem; }
-        .info-box { background: #f9f9f9; border-left: 4px solid #991b1b; padding: 1.5rem; margin-top: 1rem; font-size: 0.9rem; }
-        .step-badge { background: #991b1b; color: white; padding: 4px 12px; border-radius: 4px; font-size: 11px; font-weight: bold; }
+        .info-box { background: #f9f9f9; border-left: 4px solid #991b1b; padding: 1.5rem; margin-top: 1rem; font-size: 0.95rem; }
+        .step-badge { background: #991b1b; color: white; padding: 4px 12px; border-radius: 4px; font-size: 12px; font-weight: bold; }
+        .kamae-tag { color: #991b1b; font-weight: bold; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.1em; }
     </style>
 </head>
 <body class="antialiased italic">
 
     <header class="hero-lateral flex flex-col justify-center items-center text-center p-8 text-white">
         <h1 class="text-4xl font-bold tracking-tighter">KIHON SHIATSU: DECÚBITO LATERAL</h1>
-        <p class="text-red-500 font-bold uppercase tracking-widest mt-2">Módulo 2: Maestría Profesional</p>
+        <p class="text-red-500 font-bold uppercase tracking-widest mt-2">Guía Técnica de Procedimiento Profesional</p>
     </header>
 
     <main class="py-20 px-6 max-w-6xl mx-auto">
 
-        <section class="mb-20">
-            <h2 class="text-3xl font-bold mb-10 text-center italic underline decoration-red-900 underline-offset-8">KAMAE (Posturas del Terapeuta)</h2>
-            <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
-                <div class="text-center"><div class="img-box"><img src="imagenes/lat-1.png"></div><p class="text-[10px] mt-2 font-bold uppercase">Seiza</p></div>
-                <div class="text-center"><div class="img-box"><img src="imagenes/lat-2.png"></div><p class="text-[10px] mt-2 font-bold uppercase">Seiza Detalle</p></div>
-                <div class="text-center"><div class="img-box"><img src="imagenes/lat-3.png"></div><p class="text-[10px] mt-2 font-bold uppercase">Kiza</p></div>
-                <div class="text-center"><div class="img-box"><img src="imagenes/lat-4.png"></div><p class="text-[10px] mt-2 font-bold uppercase">Katahiza</p></div>
-            </div>
-            <div class="info-box mt-8">
-                <strong>Zen Stretching y Taiso:</strong> Los Kamae deben abordarse para evitar el cansancio físico y permitir que la terapia sea eficiente, gentil y elegante.
-            </div>
+        <section class="mb-16">
+            <h2 class="text-2xl font-bold mb-4 italic">KAMAE Y PROCEDIMIENTO</h2>
+            <p class="text-sm">Kamae hace referencia a la postura a tomar por el terapeuta para aplicar el método requerido e indicado según la posición del paciente. El terapeuta comenzará por el lado izquierdo. El paciente yace en la postura lateral derecha, con la pierna derecha estirada. Para asegurar la estabilidad del tronco, la pierna izquierda se cruza sobre la derecha, y la rodilla izquierda se apoya en el suelo.</p>
         </section>
 
         <section class="py-16 bg-stone-900 mb-20 rounded-3xl">
@@ -60,14 +52,18 @@
         <section class="op-section">
             <div class="grid md:grid-cols-2 gap-12">
                 <div>
-                    <span class="step-badge">OPERACIÓN 1</span>
-                    <h3 class="text-2xl font-bold mt-4 mb-4">Región Cervical Anterior</h3>
-                    <p class="text-sm">4 puntos en el borde interno del SCM. Presión hacia las apófisis espinosas.</p>
+                    <span class="step-badge">1. REGIÓN CERVICAL ANTERIOR</span>
+                    <div class="mt-6 flex items-center gap-4">
+                        <div class="w-24 img-box"><img src="imagenes/lat-4.png"></div>
+                        <p class="kamae-tag">KAMAE: KATAHIZA 片膝 (Postura Básica)</p>
+                    </div>
                     <div class="info-box">
-                        <strong>Terapeuta:</strong> Katahiza frente al cuello. Mano izquierda sobre el hombro del paciente. Pulgar derecho presiona 3 veces por 3 segundos.
+                        <strong>Localización:</strong> 4 puntos en el borde interno del esternocleidomastoideo (SCM), desde el triángulo carotideo hacia la clavícula.<br>
+                        <strong>Técnica:</strong> Presión con un solo pulgar hacia las apófisis espinosas cervicales. Mano izquierda sobre el hombro izquierdo.<br>
+                        <strong>Frecuencia:</strong> 3 veces, 3 segundos cada una.
                     </div>
                 </div>
-                <div class="img-grid grid-cols-2">
+                <div class="grid grid-cols-2 gap-2">
                     <div class="img-box"><img src="imagenes/lat-5.png"></div>
                     <div class="img-box"><img src="imagenes/lat-6.png"></div>
                 </div>
@@ -77,14 +73,18 @@
         <section class="op-section">
             <div class="grid md:grid-cols-2 gap-12">
                 <div>
-                    <span class="step-badge">OPERACIÓN 2</span>
-                    <h3 class="text-2xl font-bold mt-4 mb-4">Región Cervical Lateral</h3>
-                    <p class="text-sm">4 puntos bajo el proceso mastoideo hacia la base del cuello.</p>
+                    <span class="step-badge">2. REGIÓN CERVICAL LATERAL</span>
+                    <div class="mt-6 flex items-center gap-4">
+                        <div class="w-24 img-box"><img src="imagenes/lat-4.png"></div>
+                        <p class="kamae-tag">KAMAE: KATAHIZA 片膝 (Postura Básica)</p>
+                    </div>
                     <div class="info-box">
-                        <strong>Técnica:</strong> Pulgar sobre pulgar (derecho debajo). Presión perpendicular hacia el cuerpo de las vértebras. 3 veces, 3 segundos.
+                        <strong>Localización:</strong> 4 puntos bajo el proceso mastoideo hacia la base del cuello.<br>
+                        <strong>Técnica:</strong> Pulgar sobre pulgar (pulgar derecho debajo). Presión perpendicular hacia el centro del cuello (cuerpo de las vértebras).<br>
+                        <strong>Frecuencia:</strong> 3 veces, 3 segundos cada una.
                     </div>
                 </div>
-                <div class="img-grid grid-cols-2">
+                <div class="grid grid-cols-2 gap-2">
                     <div class="img-box"><img src="imagenes/lat-7.png"></div>
                     <div class="img-box"><img src="imagenes/lat-8.png"></div>
                 </div>
@@ -94,14 +94,19 @@
         <section class="op-section">
             <div class="grid md:grid-cols-2 gap-12">
                 <div>
-                    <span class="step-badge">OP 3 & 4</span>
-                    <h3 class="text-2xl font-bold mt-4 mb-4">Bulbo Raquídeo y Cervical Posterior</h3>
-                    <p class="text-sm">Médula oblonga y 3 puntos entre línea lateral y bulbo.</p>
+                    <span class="step-badge">3. BULBO RAQUÍDEO</span>
+                    <div class="info-box mb-6">
+                        <strong>Técnica:</strong> Sostener la frente con mano izquierda. Pulgar derecho en la médula oblonga hacia el entrecejo.<br>
+                        <strong>Frecuencia:</strong> 3 veces, 5 segundos cada una.
+                    </div>
+                    <span class="step-badge">4. REGIÓN CERVICAL POSTERIOR</span>
                     <div class="info-box">
-                        <strong>Técnica:</strong> Sostener frente. Presión hacia el entrecejo (Bulbo) y hacia la tráquea (Posterior).
+                        <strong>Localización:</strong> 3 puntos entre la línea lateral y el bulbo raquídeo.<br>
+                        <strong>Técnica:</strong> Pulgar sobre pulgar hacia la tráquea.<br>
+                        <strong>Frecuencia:</strong> 3 veces, 3 segundos cada una.
                     </div>
                 </div>
-                <div class="img-grid grid-cols-2">
+                <div class="grid grid-cols-2 gap-2">
                     <div class="img-box"><img src="imagenes/lat-9.png"></div>
                     <div class="img-box"><img src="imagenes/lat-10.png"></div>
                 </div>
@@ -111,14 +116,24 @@
         <section class="op-section">
             <div class="grid md:grid-cols-2 gap-12">
                 <div>
-                    <span class="step-badge">OP 5 & 6</span>
-                    <h3 class="text-2xl font-bold mt-4 mb-4">Regiones Escapulares</h3>
-                    <p class="text-sm">3 puntos supraescapulares y 5 puntos interescapulares (D1 a D8).</p>
+                    <span class="step-badge">5. REGIÓN SUPRAESCAPULAR</span>
+                    <div class="mt-6 flex items-center gap-4">
+                        <div class="w-24 img-box"><img src="imagenes/lat-1.png"></div>
+                        <p class="kamae-tag">KAMAE: SEIZA 正座 / KIZA 跪座</p>
+                    </div>
+                    <div class="info-box mb-6">
+                        <strong>Localización:</strong> 3 puntos sobre el borde superior de la escápula.<br>
+                        <strong>Técnica:</strong> Pulgar sobre pulgar. Presión perpendicular.<br>
+                        <strong>Frecuencia:</strong> 3 veces, 3 segundos cada una.
+                    </div>
+                    <span class="step-badge">6. REGIÓN INTERESCAPULAR</span>
                     <div class="info-box">
-                        <strong>Terapeuta:</strong> Seiza. Pulgar sobre pulgar. Presión perpendicular. En interescapular, detenerse 5 segundos en el punto 5.
+                        <strong>Localización:</strong> 5 puntos desde D1-D2 hasta D7-D8.<br>
+                        <strong>Técnica:</strong> Pulgar sobre pulgar. Presión perpendicular.<br>
+                        <strong>Frecuencia:</strong> 3 veces, 3 segundos. * En la tercera vez el 5° punto se presiona 5 segundos.
                     </div>
                 </div>
-                <div class="img-grid grid-cols-2">
+                <div class="grid grid-cols-2 gap-2">
                     <div class="img-box"><img src="imagenes/lat-11.png"></div>
                     <div class="img-box"><img src="imagenes/lat-12.png"></div>
                     <div class="img-box"><img src="imagenes/lat-13.png"></div>
@@ -128,23 +143,26 @@
         </section>
 
         <section class="op-section">
-            <h3 class="text-xl font-bold mb-6 text-center">Fig. 24: Mapa Infraescapular y Lumbar (10 Puntos)</h3>
-            <div class="max-w-md mx-auto">
-                <div class="img-box shadow-2xl border-4 border-red-900/10"><img src="imagenes/lat-15.png"></div>
+            <div class="text-center mb-10">
+                <h3 class="font-bold">Fig. 24. Los diez puntos de las regiones infraescapular y lumbar</h3>
+                <div class="max-w-xs mx-auto mt-4">
+                    <div class="img-box border-4 border-red-900"><img src="imagenes/lat-15.png"></div>
+                </div>
             </div>
-        </section>
-
-        <section class="op-section">
             <div class="grid md:grid-cols-2 gap-12">
                 <div>
-                    <span class="step-badge">OPERACIÓN 7</span>
-                    <h3 class="text-2xl font-bold mt-4 mb-4">Infraescapular y Lumbar (Pulgares)</h3>
-                    <p class="text-sm">Desde el punto 5 interescapular hasta el Sacro (Puntos 1 a 10 del mapa).</p>
+                    <span class="step-badge">7. REGIÓN INFRAESCAPULAR Y LUMBAR (Pulgares)</span>
+                    <div class="mt-6 flex items-center gap-4">
+                        <div class="w-24 img-box"><img src="imagenes/lat-1.png"></div>
+                        <p class="kamae-tag">KAMAE: SEIZA 正座</p>
+                    </div>
                     <div class="info-box">
-                        <strong>Técnica:</strong> Pulgar sobre pulgar. En la 3ra repetición, el punto 10 se presiona fuerte por 5 segundos.
+                        <strong>Localización:</strong> 10 puntos desde el 5° punto de la interescapular hasta el Sacro.<br>
+                        <strong>Técnica:</strong> Pulgar sobre pulgar (pulgar derecho debajo). Presión perpendicular.<br>
+                        <strong>Frecuencia:</strong> 3 veces, 3 segundos cada una. * En la tercera vez el 10° punto se presiona fuerte 5 segundos 3 veces cada una.
                     </div>
                 </div>
-                <div class="img-grid grid-cols-2">
+                <div class="grid grid-cols-2 gap-2">
                     <div class="img-box"><img src="imagenes/lat-16.png"></div>
                     <div class="img-box"><img src="imagenes/lat-17.png"></div>
                 </div>
@@ -154,29 +172,35 @@
         <section class="op-section">
             <div class="grid md:grid-cols-2 gap-12">
                 <div>
-                    <span class="step-badge">OPERACIÓN 8</span>
-                    <h3 class="text-2xl font-bold mt-4 mb-4">Presión Palmar y Estimulación</h3>
-                    <p class="text-sm">4 puntos palmares y barrida gentil final.</p>
+                    <span class="step-badge">8. PRESIÓN Y ESTIMULACIÓN PALMAR</span>
+                    <div class="mt-6 flex items-center gap-4">
+                        <div class="w-24 img-box"><img src="imagenes/lat-4.png"></div>
+                        <p class="kamae-tag">KAMAE: KATAHIZA 片膝 (Cercana a las nalgas)</p>
+                    </div>
                     <div class="info-box">
-                        <strong>Técnica:</strong> Katahiza cercana a nalgas. Presión palmar 2 veces (3 seg). Estimulación: 2 barridas desde región escapular a lumbosacra.
+                        <strong>Técnica:</strong> Palmar una sola mano. Mano izquierda sobre cadera y presiona con mano derecha.<br>
+                        <strong>Puntos:</strong> 4 puntos desde interescapular hacia L5.<br>
+                        <strong>Presión palmar:</strong> 2 veces, 3 segundos cada una.<br>
+                        <strong>Estimulación:</strong> 2 veces barrida gentil desde región escapular hacia región lumbosacra.
                     </div>
                 </div>
-                <div class="img-grid grid-cols-2">
-                    <div class="img-box"><img src="imagenes/lat-18.png"></div>
-                    <div class="img-box"><img src="imagenes/lat-19.png"></div>
-                    <div class="img-box"><img src="imagenes/lat-20.png"></div>
-                    <div class="img-box"><img src="imagenes/lat-21.png"></div>
-                    <div class="img-box"><img src="imagenes/lat-22.png"></div>
+                <div class="grid grid-cols-1 gap-2">
+                    <div class="img-box mb-2"><img src="imagenes/lat-18.png"></div>
+                    <div class="grid grid-cols-2 gap-2">
+                        <div class="img-box"><img src="imagenes/lat-19.png"></div>
+                        <div class="img-box"><img src="imagenes/lat-20.png"></div>
+                        <div class="img-box"><img src="imagenes/lat-21.png"></div>
+                        <div class="img-box"><img src="imagenes/lat-22.png"></div>
+                    </div>
                 </div>
             </div>
         </section>
 
     </main>
 
-    <footer class="py-20 bg-stone-900 text-center text-white italic">
-        <h2 class="text-3xl font-bold mb-8 uppercase tracking-tighter">Espacio INYO ☯️</h2>
-        <p class="text-xs text-stone-500 mb-8">Al terminar el lado izquierdo, se procede a cambiar la postura del paciente para el lado derecho.</p>
-        <a href="https://inyodo.github.io/Shiatsu-Namikoshi-Modulos/" class="inline-block border border-white px-8 py-3 text-[10px] uppercase font-bold tracking-widest hover:bg-white hover:text-stone-900 transition">Regresar al Portal</a>
+    <footer class="py-16 bg-stone-900 text-center text-white font-bold italic">
+        <p class="uppercase tracking-widest text-sm">Espacio INYO</p>
+        <p class="text-[10px] mt-4 text-stone-500 uppercase">Terminado el lado izquierdo se procede a cambiar la postura para el lado derecho.</p>
     </footer>
 
 </body>
