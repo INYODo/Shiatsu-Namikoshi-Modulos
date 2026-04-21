@@ -194,6 +194,13 @@
                     <p>Módulo 1: Silla, Zafu y Seiza. 12 operaciones básicas.</p>
                     <strong>Acceder →</strong>
                 </a>
+
+                <a href="modulo2-lateral.html" class="card locked" id="mod-lateral">
+                    <span class="status waiting" id="st-lateral">Bloqueado</span>
+                    <h3>02. Decúbito Lateral</h3>
+                    <p>Kihon Shiatsu Nivel II: Protocolo completo de 22 operaciones.</p>
+                    <strong>Acceder →</strong>
+                </a>
                 
                 <a href="craneo.html" class="card locked" id="mod-craneo">
                     <span class="status waiting" id="st-craneo">Bloqueado</span>
@@ -238,10 +245,11 @@
             const errorMsg = document.getElementById('error-msg');
             
             const keys = {
-                "SILLA26": ["silla"], // Nueva llave Módulo 1
+                "SILLA26": ["silla"],
+                "LATERAL26": ["lateral"], // Nueva llave Módulo 2
                 "SUPINO26": ["craneo", "rostro", "pecho", "abdomen"], 
                 "NIVEL1": ["craneo", "rostro"],
-                "GASTON-INYO": ["silla", "craneo", "rostro", "pecho", "abdomen"], // Llave maestra actualizada
+                "GASTON-INYO": ["silla", "lateral", "craneo", "rostro", "pecho", "abdomen"], // Maestro actualizado
                 "ABDOMEN-ONLY": ["abdomen"]
             };
 
