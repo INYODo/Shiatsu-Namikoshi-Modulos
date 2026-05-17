@@ -1,6 +1,12 @@
 <!DOCTYPE html>
 <html lang="es" class="scroll-smooth">
 <head>
+    <script>
+        if (sessionStorage.getItem('acceso_inyo') !== 'autorizado') {
+            document.body.innerHTML = ''; // Borra el contenido completo antes de que parpadee la pantalla
+            window.location.href = 'index.html'; // Lo expulsa al portal de inicio
+        }
+    </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Módulo 2: Decúbito Lateral | Gastón Burgos - Espacio INYO</title>
