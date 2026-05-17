@@ -201,6 +201,13 @@
                     <p>Kihon Shiatsu Nivel II: Protocolo completo de 22 operaciones.</p>
                     <strong>Acceder →</strong>
                 </a>
+
+                <a href="decubito-prono.html" class="card locked" id="mod-prono">
+                    <span class="status waiting" id="st-prono">Bloqueado</span>
+                    <h3>03. Decúbito Prono</h3>
+                    <p>Guía Shiatsu Nivel III: Secuencia técnica de 25 operaciones.</p>
+                    <strong>Acceder →</strong>
+                </a>
                 
                 <a href="craneo.html" class="card locked" id="mod-craneo">
                     <span class="status waiting" id="st-craneo">Bloqueado</span>
@@ -246,10 +253,11 @@
             
             const keys = {
                 "SILLA26": ["silla"],
-                "LATERAL26": ["lateral"], // Nueva llave Módulo 2
+                "LATERAL26": ["lateral"],
+                "PRONO26": ["prono"], // Nueva llave agregada para Módulo 3
                 "SUPINO26": ["craneo", "rostro", "pecho", "abdomen"], 
                 "NIVEL1": ["craneo", "rostro"],
-                "GASTON-INYO": ["silla", "lateral", "craneo", "rostro", "pecho", "abdomen"], // Maestro actualizado
+                "GASTON-INYO": ["silla", "lateral", "prono", "craneo", "rostro", "pecho", "abdomen"], // Llave maestra actualizada con prono
                 "ABDOMEN-ONLY": ["abdomen"]
             };
 
