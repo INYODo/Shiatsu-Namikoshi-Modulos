@@ -237,6 +237,14 @@
                     <strong>Acceder →</strong>
                 </a>
 
+                <!-- TARJETA AÑADIDA: DECÚBITO SUPINO BRAZOS Y PIERNAS -->
+                <a href="decubito-supino.html" class="card locked" id="mod-supino-bp">
+                    <span class="status waiting" id="st-supino-bp">Bloqueado</span>
+                    <h3>05. Decúbito Supino</h3>
+                    <p>Brazos y Piernas: Kihon avanzado, líneas musculares y 24 secuencias.</p>
+                    <strong>Acceder →</strong>
+                </a>
+
             </div>
         </div>
 
@@ -254,10 +262,11 @@
             const keys = {
                 "SILLA26": ["silla"],
                 "LATERAL26": ["lateral"],
-                "PRONO26": ["prono"], // Nueva llave agregada para Módulo 3
+                "PRONO26": ["prono"],
                 "SUPINO26": ["craneo", "rostro", "pecho", "abdomen"], 
+                "SUPINO30": ["supino-bp"], // Llave específica para Supino de Brazos y Piernas
                 "NIVEL1": ["craneo", "rostro"],
-                "GASTON-INYO": ["silla", "lateral", "prono", "craneo", "rostro", "pecho", "abdomen"], // Llave maestra actualizada con prono
+                "GASTON-INYO": ["silla", "lateral", "prono", "craneo", "rostro", "pecho", "abdomen", "supino-bp"], // Llave maestra completa
                 "ABDOMEN-ONLY": ["abdomen"]
             };
 
@@ -279,8 +288,15 @@
             } else {
                 errorMsg.style.display = 'block';
                 document.getElementById('access-code').value = "";
+                document.getElementById('access-code').focus();
             }
         }
+
+        document.getElementById('access-code').addEventListener('keypress', function(e) {
+            if (e.key === 'Enter') {
+                validateCode();
+            }
+        });
     </script>
 </body>
 </html>
