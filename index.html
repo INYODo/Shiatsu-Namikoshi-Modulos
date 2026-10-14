@@ -216,6 +216,14 @@
                     <p>Anma & Shiatsu: Contacto, hamacado, Puntos Shu y 2ª línea de Vejiga.</p>
                     <strong>Acceder →</strong>
                 </a>
+
+                <!-- TARJETA: SEMINARIO ESPECIAL ABDOMEN (ANMA & ANPUKU) -->
+                <a href="https://inyodo.github.io/Anma/guia-practica-anpuku.html" class="card locked" id="mod-anma-abdomen">
+                    <span class="status waiting" id="st-anma-abdomen">Bloqueado</span>
+                    <h3>Seminario Especial: Abdomen</h3>
+                    <p>Anma & Anpuku: Las 8 técnicas en futón, biomecánica y sincronización respiratoria.</p>
+                    <strong>Acceder →</strong>
+                </a>
                 
                 <a href="craneo.html" class="card locked" id="mod-craneo">
                     <span class="status waiting" id="st-craneo">Bloqueado</span>
@@ -245,7 +253,7 @@
                     <strong>Acceder →</strong>
                 </a>
 
-                <!-- TARJETA AÑADIDA: DECÚBITO SUPINO BRAZOS Y PIERNAS -->
+                <!-- TARJETA: DECÚBITO SUPINO BRAZOS Y PIERNAS -->
                 <a href="decubito-supino.html" class="card locked" id="mod-supino-bp">
                     <span class="status waiting" id="st-supino-bp">Bloqueado</span>
                     <h3>05. Decúbito Supino</h3>
@@ -270,13 +278,14 @@
             const keys = {
                 "SILLA26": ["silla"],
                 "LATERAL26": ["lateral"],
-                "PRONO26": ["prono", "anma-espalda"], // Habilita decúbito prono y el especial de espalda
-                "ANMA26": ["anma-espalda"], // Llave exclusiva para el Seminario de Espalda Anma & Shiatsu
-                "ESPALDA26": ["anma-espalda"], // Llave alternativa directa
+                "PRONO26": ["prono", "anma-espalda"], 
+                "ANMA26": ["anma-espalda", "anma-abdomen"], // Desbloquea Espalda y Abdomen simultáneamente
+                "ESPALDA26": ["anma-espalda"], 
+                "ABDOMEN26": ["anma-abdomen"], // Llave exclusiva para el Seminario de Abdomen
                 "SUPINO26": ["craneo", "rostro", "pecho", "abdomen"], 
-                "SUPINO30": ["supino-bp"], // Llave específica para Supino de Brazos y Piernas
+                "SUPINO30": ["supino-bp"], 
                 "NIVEL1": ["craneo", "rostro"],
-                "GASTON-INYO": ["silla", "lateral", "prono", "craneo", "rostro", "pecho", "abdomen", "supino-bp", "anma-espalda"], // Llave maestra completa
+                "GASTON-INYO": ["silla", "lateral", "prono", "craneo", "rostro", "pecho", "abdomen", "supino-bp", "anma-espalda", "anma-abdomen"], // Llave maestra
                 "ABDOMEN-ONLY": ["abdomen"]
             };
 
