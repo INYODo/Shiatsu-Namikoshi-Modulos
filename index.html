@@ -208,6 +208,14 @@
                     <p>Guía Shiatsu Nivel III: Secuencia técnica de 25 operaciones.</p>
                     <strong>Acceder →</strong>
                 </a>
+
+                <!-- TARJETA: TRATAMIENTO DE ESPALDA (ANMA & SHIATSU) -->
+                <a href="anma-shiatsu-tratamiento-espalda.html" class="card locked" id="mod-anma-espalda">
+                    <span class="status waiting" id="st-anma-espalda">Bloqueado</span>
+                    <h3>Seminario Especial: Espalda</h3>
+                    <p>Anma & Shiatsu: Contacto, hamacado, Puntos Shu y 2ª línea de Vejiga.</p>
+                    <strong>Acceder →</strong>
+                </a>
                 
                 <a href="craneo.html" class="card locked" id="mod-craneo">
                     <span class="status waiting" id="st-craneo">Bloqueado</span>
@@ -262,11 +270,13 @@
             const keys = {
                 "SILLA26": ["silla"],
                 "LATERAL26": ["lateral"],
-                "PRONO26": ["prono"],
+                "PRONO26": ["prono", "anma-espalda"], // Habilita decúbito prono y el especial de espalda
+                "ANMA26": ["anma-espalda"], // Llave exclusiva para el Seminario de Espalda Anma & Shiatsu
+                "ESPALDA26": ["anma-espalda"], // Llave alternativa directa
                 "SUPINO26": ["craneo", "rostro", "pecho", "abdomen"], 
                 "SUPINO30": ["supino-bp"], // Llave específica para Supino de Brazos y Piernas
                 "NIVEL1": ["craneo", "rostro"],
-                "GASTON-INYO": ["silla", "lateral", "prono", "craneo", "rostro", "pecho", "abdomen", "supino-bp"], // Llave maestra completa
+                "GASTON-INYO": ["silla", "lateral", "prono", "craneo", "rostro", "pecho", "abdomen", "supino-bp", "anma-espalda"], // Llave maestra completa
                 "ABDOMEN-ONLY": ["abdomen"]
             };
 
