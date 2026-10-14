@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+    <script>
+        if (sessionStorage.getItem('acceso_inyo') !== 'autorizado') {
+            document.documentElement.style.display = 'none';
+            window.location.href = 'index.html';
+        }
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tratamiento de Espalda: Anma & Shiatsu | Espacio INYO</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;600;700&family=Lato:ital,wght@0,300;0,400;0,700;1,300;1,400&display=swap" rel="stylesheet">
+    <style>
+        h1, h2, h3, h4, .brand-font { font-family: 'Oswald', sans-serif; text-transform: uppercase; letter-spacing: 0.05em; }
+        body { font-family: 'Lato', sans-serif; background-color: #fdfbf9; color: #2d2d2d; line-height: 1.8; }
+        
+        .hero-espalda { 
+            background: linear-gradient(rgba(20, 20, 20, 0.85), rgba(20, 20, 20, 0.95)), 
+            url('https://inyodo.github.io/espacio-inyo-web/imagen/tecnicasautenticas.jpeg'); 
+            background-size: cover; background-position: center; min-height: 55vh;
+        }
+
+        /* Reproductor Vertical 9:16 Optimizado para Móvil */
+        .video-wrapper-vertical {
+            position: relative; padding-bottom: 177.77%; height: 0; overflow: hidden;
+            max-width: 300px; margin: 1.5rem auto; border-radius: 16px;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.25); background: #000;
+        }
+        .video-wrapper-vertical iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
+
+        /* Contenedores de Imágenes Plegables */
+        .drawer-content { max-height: 0; overflow: hidden; transition: max-height 0.5s cubic-bezier(0, 1, 0, 1); }
+        .drawer-content.open { max-height: 2000px; transition: max-height 0.6s ease-in-out; }
+
+        .img-container { 
+            background: #ffffff; border: 1px solid #e7e5e4; border-radius: 4px; 
+            overflow: hidden; padding: 6px; box-shadow: 0 4px 10px rgba(0,0,0,0.04); 
+        }
+        .img-container img { width: 100%; height: auto; display: block; object-fit: contain; }
+
+        .instruction-block { border-left: 4px solid #991b1b; padding-left: 1.25rem; margin: 1.5rem 0; font-size: 0.92rem; }
+        .badge-step { background: #991b1b; color: white; padding: 3px 14px; font-size: 11px; font-weight: bold; border-radius: 2px; display: inline-block; letter-spacing: 0.15em; }
+        .badge-shu { background: #1c1917; color: #f59e0b; padding: 2px 10px; font-size: 10px; font-weight: bold; border-radius: 2px; display: inline-block; letter-spacing: 0.1em; border: 1px solid #78350f; }
+        
+        /* Modal Lightbox */
+        #lightbox-modal { display: none; position: fixed; inset: 0; z-index: 100; background: rgba(0,0,0,0.92); backdrop-filter: blur(8px); align-items: center; justify-content: center; padding: 1.5rem; }
+        #lightbox-modal.active { display: flex; }
+    </style>
+</head>
+<body class="antialiased">
+
+    <!-- Header Breve & Navegación -->
+    <nav class="bg-stone-900 border-b border-stone-800 text-stone-300 py-3 px-6 text-xs italic">
+        <div class="max-w-5xl mx-auto flex justify-between items-center">
+            <a href="index.html" class="hover:text-white transition flex items-center gap-2">
+                <i class="fas fa-arrow-left text-red-500"></i> Volver al Portal de Alumnos
+            </a>
+            <span class="text-stone-400 font-bold uppercase tracking-widest text-[10px]">Espacio INYO ☯️</span>
+        </div>
+    </nav>
+
+    <!-- Header Hero Portada -->
+    <header class="hero-espalda flex flex-col justify-center items-center text-center p-8 text-white relative">
+        <div class="max-w-4xl space-y-3">
+            <p class="text-red-400 text-xs tracking-[0.6em] font-bold uppercase">Formación Presencial Intensiva • Guía Clínica</p>
+            <h1 class="text-3xl md:text-5xl font-bold tracking-tight text-white uppercase italic">Tratamiento de Espalda</h1>
+            <p class="text-stone-300 text-sm md:text-lg font-light max-w-2xl mx-auto italic">
+                Integración de Anma Tradicional, Shiatsu Namikoshi & Canales de Vejiga (Puntos Shu)
+            </p>
+            <div class="w-20 h-px bg-red-700 mx-auto mt-4"></div>
+        </div>
+    </header>
+
+    <main class="max-w-5xl mx-auto py-16 px-6">
+
+        <!-- INTRODUCCIÓN METODOLÓGICA -->
+        <section class="bg-white border border-stone-200 p-8 rounded-sm shadow-sm mb-16 italic text-stone-700 text-sm leading-relaxed space-y-4">
+            <div class="flex items-center gap-3 text-red-900 font-bold uppercase text-xs tracking-wider border-b border-stone-100 pb-3">
+                <i class="fas fa-torii-gate text-base"></i> Protocolo de Abordaje Posterior (Decúbito Prono)
+            </div>
+            <p>
+                Este protocolo combina la sensibilidad receptiva del <strong>Anma tradicional</strong> (escucha táctil y sincronización respiratoria) con la precisión neuromuscular del <strong>Shiatsu Namikoshi</strong> y la estimulación refleja visceral mediante los <strong>Puntos Shu del Canal de Vejiga</strong>.
+            </p>
+            <p class="text-stone-900 font-semibold border-l-2 border-red-900 pl-4">
+                El objetivo es descontracturar la musculatura paravertebral profunda, armonizar el sistema nervioso autónomo y regular la función de los órganos internos a través de la espalda.
+            </p>
+        </section>
+
+        <!-- ========================================== -->
+        <!-- PASO 1: CONTACTO, RESPIRACIÓN & HAMACADO   -->
+        <!-- ========================================== -->
+        <section class="mb-24">
+            <span class="badge-step mb-3">PASO 1</span>
+            <h2 class="text-2xl md:text-3xl font-bold text-stone-900 uppercase italic">
+                Contacto Inicial, Ritmo Respiratorio y Hamacado Secuencial
+            </h2>
+            <div class="w-16 h-px bg-red-900 my-4"></div>
+
+            <div class="instruction-block space-y-4 text-stone-700 text-sm">
+                <div>
+                    <h4 class="font-bold text-stone-900 uppercase text-xs tracking-wider mb-1">1. Contacto con el Paciente y Sincronización:</h4>
+                    <p>Posicionamos ambas manos apoyadas suavemente sobre la espalda del paciente. Escuchamos su respiración el tiempo necesario hasta acompasar y sincronizar nuestro ritmo respiratorio con el suyo. No apresurar esta etapa; la escucha táctil dispone al sistema parasimpático del receptor.</p>
+                </div>
+
+                <div>
+                    <h4 class="font-bold text-stone-900 uppercase text-xs tracking-wider mb-1">2. Ritmo y Hamacado de Sacro:</h4>
+                    <p>Nos ubicamos en posición <strong>Seiza</strong> (o postura lateral cómoda que permita transferir el balanceo desde nuestro propio eje corporal). Colocamos una mano en la región dorsal alta y la otra sobre el Sacro. Iniciamos el hamacado rítmico, cuidando que ambas manos trabajen sincronizadas y sin interrumpir el flujo del vaivén en ningún instante.</p>
+                </div>
+
+                <div>
+                    <h4 class="font-bold text-stone-900 uppercase text-xs tracking-wider mb-1">3. Ritmo y Hamacado de Lumbar:</h4>
+                    <p>Tras un par de minutos de hamacado base, retiramos la mano ubicada en dorsal alta y la desplazamos acompasando el ritmo sobre las apófisis espinosas dorsales y lumbares hasta llegar al sacro, situándola a la par de la mano sacral. Se continúa el balanceo y, gradualmente, la mano móvil se aleja siguiendo el ritmo rector de la mano sacral fija, hasta que ambas vuelven a ubicarse una en sacro y otra en dorsal alta. Esta secuencia puede repetirse varias veces.</p>
+                </div>
+
+                <div>
+                    <h4 class="font-bold text-stone-900 uppercase text-xs tracking-wider mb-1">4. Ritmo y Hamacado de Dorsal (desde Dorsal Media):</h4>
+                    <p>Mientras la mano en sacro gobierna el ritmo de hamacado, la mano dorsal alta se acerca progresivamente hacia el sacro, regresa y se asienta en la <strong>región dorsal media</strong>. Es vital no perder la simetría ni el ritmo. En este momento, la mano en dorsal media asume el rol directriz del balanceo, esperando el acercamiento de la mano sacral.</p>
+                </div>
+
+                <div>
+                    <h4 class="font-bold text-stone-900 uppercase text-xs tracking-wider mb-1">5. Disminución y Conclusión del Hamacamiento:</h4>
+                    <p>Cuando ambas manos se encuentran balanceando en la parte media de la espalda, comienzan a separarse. <em>Nota fundamental de tacto:</em> hasta aquí el hamacado conectaba con el tejido profundo; ahora pasamos a un tacto superficial, escuchando la piel y la fascia exterior. Una mano se aleja hacia el Sacro y la otra hacia el Cráneo. A medida que se aproximan a los extremos, el contacto se va despegando sutilmente hasta perderse sobre el eje longitudinal de la persona, desvaneciendo el estímulo de manera orgánica y armónica.</p>
+                </div>
+            </div>
+
+            <!-- Video Shorts Demostrativo Paso 1 -->
+            <div class="my-8 text-center">
+                <p class="text-xs uppercase font-bold text-stone-500 tracking-widest mb-3">🎥 Video Demostrativo: Secuencia de Hamacado en Seiza</p>
+                <div class="video-wrapper-vertical">
+                    <iframe src="https://www.youtube.com/embed/H797v0JkhKA" title="Ritmo y Hamacado de Espalda" frameborder="0" allowfullscreen></iframe>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========================================== -->
+        <!-- PASO 2: SHIATSU 1ª LÍNEA DE VEJIGA (SHU)  -->
+        <!-- ========================================== -->
+        <section class="mb-24">
+            <span class="badge-step mb-3">PASO 2</span>
+            <h2 class="text-2xl md:text-3xl font-bold text-stone-900 uppercase italic">
+                Shiatsu Namikoshi en Columna (1ª Línea de Vejiga / Puntos Shu)
+            </h2>
+            <div class="w-16 h-px bg-red-900 my-4"></div>
+
+            <div class="bg-amber-50 border border-amber-200 p-6 rounded-sm my-6 text-xs text-amber-950 space-y-2 italic shadow-sm">
+                <span class="badge-shu">CORRELACIÓN TÉCNICA SHIATSU & PUNTOS SHU</span>
+                <p>
+                    En el método <strong>Shiatsu Namikoshi</strong> oficial, la región interescapular se aborda clásicamente distribuyendo <strong>5 puntos equidistantes</strong> entre D1 y D8.
+                </p>
+                <p>
+                    Al integrar la medicina oriental y el <strong>Canal de Vejiga (1ª Línea)</strong>, estimulamos <strong>6 puntos Shu dorsales</strong> (desde D2 hasta D8) que conectan de manera refleja con los órganos internos (Pulmón, Pericardio, Corazón, Diafragma, etc.). Ambas aplicaciones coinciden biomecánicamente sobre el borde interno del músculo paravertebral.
+                </p>
+            </div>
+
+            <!-- BOTÓN MODAL: PUNTOS SHU DE ESPALDA -->
+            <div class="bg-white border-2 border-stone-800 p-6 rounded-sm shadow-md flex flex-col sm:flex-row items-center justify-between gap-6 my-8">
+                <div class="space-y-1 text-center sm:text-left">
+                    <h4 class="font-bold text-stone-900 uppercase text-sm">Lámina de Referencia: Puntos Shu de Espalda</h4>
+                    <p class="text-xs text-stone-500 italic">Consultá el mapa anatómico de resonancia visceral antes de aplicar la presión.</p>
+                </div>
+                <button onclick="openLightbox('imagenes/3.puntos_shu_espalda.jpg')" class="bg-stone-900 hover:bg-red-900 text-white px-6 py-3 text-xs font-bold uppercase tracking-widest transition flex items-center gap-2 italic shadow-sm">
+                    <i class="fas fa-eye text-amber-400"></i> Ver Lámina Anatómica
+                </button>
+            </div>
+
+            <!-- OPERACIÓN 5 EXTRACTO -->
+            <div class="border border-stone-200 bg-white p-6 md:p-8 rounded-sm shadow-sm mb-10">
+                <div class="flex justify-between items-center border-b border-stone-100 pb-3 mb-4">
+                    <h3 class="text-xl font-bold uppercase text-stone-900">Operación 5: Región Interescapular</h3>
+                    <span class="text-xs font-bold text-red-900">D1/D2 a D7/D8</span>
+                </div>
+                <div class="instruction-block space-y-1 text-xs text-stone-700">
+                    <p>• <strong>Postura del paciente:</strong> Yace en decúbito prono sin almohada, con la cabeza girada hacia el lado en que trabaja el terapeuta.</p>
+                    <p>• <strong>Postura del terapeuta:</strong> Kata Hiza (Básica), al lado izquierdo del tronco del paciente. Rodilla derecha en el suelo a la altura del costado y la izquierda alzada con el pie junto a la cabeza del receptor.</p>
+                    <p>• <strong>Tipo de presión:</strong> Pulgar sobre pulgar.</p>
+                    <p>• <strong>Puntos:</strong> 5 puntos (Namikoshi) o 6 puntos (coincidiendo con Puntos Shu de Vejiga).</p>
+                    <p>• <strong>Dirección de la línea:</strong> Borde interior del músculo paravertebral.</p>
+                    <p>• <strong>Dirección de la presión:</strong> Rigurosamente perpendicular al plano corporal.</p>
+                    <p>• <strong>Frecuencia y tiempo:</strong> 3 series de 3 segundos por punto.</p>
+                </div>
+
+                <!-- Botón Desplegable Fotos Op 5 -->
+                <div class="pt-2">
+                    <button onclick="toggleDrawer('drawer-op5', this)" class="text-xs font-bold uppercase tracking-wider text-red-900 hover:text-stone-900 transition flex items-center gap-2 py-2">
+                        <i class="fas fa-images"></i> <span>Ver Fotos de Referencia (Operación 5)</span> <i class="fas fa-chevron-down transition-transform arrow-icon"></i>
+                    </button>
+                    <div id="drawer-op5" class="drawer-content mt-3">
+                        <div class="grid grid-cols-1 md:grid-cols-3 gap-4 p-4 bg-stone-50 border border-stone-200 rounded-sm">
+                            <div class="img-container"><img src="imagenes/prono-11.png" alt="Operación 5 - Foto 1"></div>
+                            <div class="img-container"><img src="imagenes/prono-12.png" alt="Operación 5 - Foto 2"></div>
+                            <div class="img-container"><img src="imagenes/prono-13.png" alt="Operación 5 - Foto 3"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Video Shorts Interescapular -->
+                <div class="mt-6 pt-4 border-t border-stone-100 text-center">
+                    <p class="text-[11px] uppercase font-bold text-stone-400 tracking-widest mb-2">🎥 Práctica Aplicada: Región Interescapular</p>
+                    <div class="video-wrapper-vertical">
+                        <iframe src="https://www.youtube.com/embed/x5nDKN_fjkQ" title="Shiatsu Interescapular" frameborder="0" allowfullscreen></iframe>
+                    </div>
+                </div>
+            </div>
+
+            <!-- OPERACIÓN 6 EXTRACTO -->
+            <div class="border border-stone-200 bg-white p-6 md:p-8 rounded-sm shadow-sm mb-10">
+                <div class="flex justify-between items-center border-b border-stone-100 pb-3 mb-4">
+                    <h3 class="text-xl font-bold uppercase text-stone-900">Operación 6: Región Infraescapular y Lumbar</h3>
+                    <span class="text-xs font-bold text-red-900">D8 a L5 / S1</span>
+                </div>
+                <div class="instruction-block space-y-1 text-xs text-stone-700">
+                    <p>• <strong>Postura del paciente:</strong> Yace en prono sin almohada, cara orientada hacia el terapeuta.</p>
+                    <p>• <strong>Postura del terapeuta:</strong> Kata Hiza (Básica).</p>
+                    <p>• <strong>Tipo de presión:</strong> Pulgar sobre pulgar perpendicular.</p>
+                    <p>• <strong>Número de puntos:</strong> 10 puntos continuos a lo largo del canal paravertebral.</p>
+                    <p>• <strong>Frecuencia y tiempo:</strong> 3 series de 3 segundos. <em>* En la 3ª serie, en el punto 10 (L5-S1) se ejerce presión sostenida firme de 5 segundos repetida 3 veces.</em></p>
+                </div>
+
+                <!-- Botón Desplegable Fotos Op 6 -->
+                <div class="pt-2">
+                    <button onclick="toggleDrawer('drawer-op6', this)" class="text-xs font-bold uppercase tracking-wider text-red-900 hover:text-stone-900 transition flex items-center gap-2 py-2">
+                        <i class="fas fa-images"></i> <span>Ver Fotos de Referencia (Operación 6)</span> <i class="fas fa-chevron-down transition-transform arrow-icon"></i>
+                    </button>
+                    <div id="drawer-op6" class="drawer-content mt-3">
+                        <div class="grid grid-cols-2 gap-4 max-w-xl mx-auto p-4 bg-stone-50 border border-stone-200 rounded-sm">
+                            <div class="img-container"><img src="imagenes/prono-14.png" alt="Operación 6 - Foto 1"></div>
+                            <div class="img-container"><img src="imagenes/prono-15.png" alt="Operación 6 - Foto 2"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Video Shorts Infraescapular y Lumbar -->
+                <div class="mt-6 pt-4 border-t border-stone-100 text-center">
+                    <p class="text-[11px] uppercase font-bold text-stone-400 tracking-widest mb-2">🎥 Práctica Aplicada: Región Infraescapular y Lumbar</p>
+                    <div class="video-wrapper-vertical">
+                        <iframe src="https://www.youtube.com/embed/NLAgSFQ6zKM" title="Shiatsu Infraescapular y Lumbar" frameborder="0" allowfullscreen></iframe>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========================================== -->
+        <!-- PASO 3: SEGUNDA LÍNEA DE VEJIGA & VÓRTICE -->
+        <!-- ========================================== -->
+        <section class="mb-24">
+            <span class="badge-step mb-3">PASO 3</span>
+            <h2 class="text-2xl md:text-3xl font-bold text-stone-900 uppercase italic">
+                Segunda Línea de Vejiga & Dispersión en Espiral (Vórtice)
+            </h2>
+            <div class="w-16 h-px bg-red-900 my-4"></div>
+
+            <div class="space-y-6 text-sm text-stone-700 italic leading-relaxed">
+                <div class="bg-white p-6 border-l-4 border-stone-900 shadow-sm space-y-3">
+                    <h3 class="text-base font-bold text-stone-900 uppercase not-italic">A. Región Interescapular (2ª Línea - Borde Medial de la Escápula):</h3>
+                    <p>
+                        Se aplica la presión perpendicular pulgar sobre pulgar exactamente sobre el borde medial escapular. Aquí se ubican los 6 puntos específicos del meridiano externo:
+                    </p>
+                    <p class="font-bold text-stone-900">
+                        • V41 (Fufen) &nbsp;|&nbsp; • V42 (Pohu) &nbsp;|&nbsp; • V43 (Gaohuangshu) &nbsp;|&nbsp; • V44 (Shentang) &nbsp;|&nbsp; • V45 (Yixi) &nbsp;|&nbsp; • V46 (Geguan)
+                    </p>
+                    <p>
+                        La postura del terapeuta y el ángulo de empuje replican la Operación 5, profundizando en la inserción de los romboides y la fascia profunda.
+                    </p>
+                </div>
+
+                <!-- Video YouTube 2ª Línea Interescapular -->
+                <div class="my-6 text-center">
+                    <p class="text-[11px] uppercase font-bold text-stone-500 tracking-widest mb-2">🎥 Video Demostrativo: 2ª Línea Interescapular</p>
+                    <div class="video-wrapper-vertical">
+                        <iframe src="https://www.youtube.com/embed/H0VORFfX9oM" title="Segunda Línea de Vejiga Interescapular" frameborder="0" allowfullscreen></iframe>
+                    </div>
+                </div>
+
+                <div class="bg-white p-6 border-l-4 border-red-800 shadow-sm space-y-3">
+                    <h3 class="text-base font-bold text-stone-900 uppercase not-italic">B. Región Infraescapular y Lumbar (Punto V47 - Zhishi y Recorrido):</h3>
+                    <p>
+                        El terapeuta adopta la postura Kata Hiza (como en Operación 6). Se localiza el punto <strong>V47 (Zhishi)</strong>, clave para la vitalidad renal y descompresión lumbosacra. Se aplican <strong>3 presiones perpendiculares de 5 segundos</strong> cada una.
+                    </p>
+                    <p>
+                        Si el cuadro clínico del paciente lo amerita, se extiende el recorrido por toda la segunda línea lumbar: <strong>V48, V49, V50, V51 y V52</strong>, bordeando el trayecto hacia la cresta ilíaca posterosuperior. El tratamiento se realiza de forma bilateral, comenzando siempre por el hemicuerpo izquierdo.
+                    </p>
+                </div>
+
+                <!-- TÉCNICA CLÍNICA DE DISPERSIÓN EN VÓRTICE -->
+                <div class="bg-stone-900 text-stone-200 p-8 rounded-sm shadow-xl space-y-3 border-l-4 border-amber-500">
+                    <h4 class="text-sm font-bold text-amber-400 uppercase tracking-widest not-italic">
+                        🌪️ Técnica de Dispersión y Liberación en Espiral (Sedación Tisular):
+                    </h4>
+                    <p class="text-xs leading-relaxed">
+                        Una vez alcanzada la profundidad adecuada en el tsubo (especialmente en <strong>V47</strong> y a lo largo de los puntos <strong>V41 a V52</strong>), se aplica una maniobra de dispersión rotacional.
+                    </p>
+                    <p class="text-xs leading-relaxed text-stone-300">
+                        Desde el epicentro más profundo de la presión, se inician suaves movimientos circulares en <strong>sentido antihorario</strong>, expandiendo progresivamente el radio en forma de espiral ascendente (efecto vórtice). Esta dinámica descomprime la fascia profunda y libera la estasis energética acumulada en el tsubo, emergiendo de manera gradual hacia la superficie del tejido hasta retirar el contacto con suavidad.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========================================== -->
+        <!-- PASO 4: CIERRE Y DESCOMPRESIÓN VERTEBRAL  -->
+        <!-- ========================================== -->
+        <section class="mb-20">
+            <span class="badge-step mb-3">PASO 4</span>
+            <h2 class="text-2xl md:text-3xl font-bold text-stone-900 uppercase italic">
+                Finalización en Decúbito Prono: Hamacado & Descompresión Interapofisiaria
+            </h2>
+            <div class="w-16 h-px bg-red-900 my-4"></div>
+
+            <div class="instruction-block space-y-3 text-sm text-stone-700 italic">
+                <p>
+                    1. <strong>Reintegración Rítmica:</strong> Repetimos el hamacado armónico de sacro como realizamos en el Paso 1, permitiendo que el sistema nervioso asimile el estímulo profundo de la presión.
+                </p>
+                <p>
+                    2. <strong>Movilización y Descompresión Paravertebral:</strong> Colocamos el <strong>pulpejo de los dedos entre las apófisis espinosas vertebrales</strong> (espacios interespinosos). Ejercemos suaves micro-movilizaciones transversales y longitudinales para liberar la tensión de las fibras musculares y ligamentos interespinosos, descomprimiendo paulatinamente la espalda alta, media y lumbosacra.
+                </p>
+            </div>
+
+            <!-- Video Shorts Demostrativo Paso 4 -->
+            <div class="my-8 text-center">
+                <p class="text-xs uppercase font-bold text-stone-500 tracking-widest mb-3">🎥 Video Demostrativo: Cierre con Hamacado y Descompresión</p>
+                <div class="video-wrapper-vertical">
+                    <iframe src="https://www.youtube.com/embed/X5YHRPcgipI" title="Cierre y Descompresión Paravertebral" frameborder="0" allowfullscreen></iframe>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- MODAL LIGHTBOX PARA LA LÁMINA DE PUNTOS SHU -->
+    <div id="lightbox-modal" onclick="closeLightbox(event)">
+        <div class="relative max-w-3xl w-full mx-auto" onclick="event.stopPropagation()">
+            <button onclick="closeLightbox()" class="absolute -top-10 right-0 text-white text-2xl hover:text-red-400 transition" title="Cerrar (Esc)">
+                <i class="fas fa-times"></i> Cerrar
+            </button>
+            <div class="bg-white p-2 rounded-sm shadow-2xl overflow-hidden max-h-[85vh] flex items-center justify-center">
+                <img id="lightbox-img" src="imagenes/3.puntos_shu_espalda.jpg" alt="Puntos Shu de Espalda" class="max-h-[80vh] w-auto object-contain">
+            </div>
+            <p class="text-center text-stone-300 text-xs italic mt-3">Mapa de Puntos Shu del Canal de Vejiga • Tocar afuera o la cruz para volver a la lectura.</p>
+        </div>
+    </div>
+
+    <!-- Footer Institucional -->
+    <footer class="bg-stone-900 text-white py-16 text-center italic border-t border-stone-800">
+        <h3 class="text-2xl font-bold uppercase tracking-widest mb-2">Espacio INYO ☯️</h3>
+        <p class="text-xs text-stone-400 uppercase tracking-wider">Formación Profesional de Maestría en Masaje Japonés</p>
+        <p class="text-[10px] text-stone-500 mt-4 tracking-widest uppercase">Instructor: Gastón Burgos • Lanús Oeste Centro</p>
+    </footer>
+
+    <!-- Scripts de Interacción -->
+    <script>
+        // Plegar y desplegar fotos de referencia
+        function toggleDrawer(id, btn) {
+            const drawer = document.getElementById(id);
+            const icon = btn.querySelector('.arrow-icon');
+            drawer.classList.toggle('open');
+            if (drawer.classList.contains('open')) {
+                icon.style.transform = 'rotate(180deg)';
+                btn.querySelector('span').textContent = 'Ocultar Fotos de Referencia';
+            } else {
+                icon.style.transform = 'rotate(0deg)';
+                btn.querySelector('span').textContent = 'Ver Fotos de Referencia';
+            }
+        }
+
+        // Control del Visor Lightbox
+        function openLightbox(src) {
+            document.getElementById('lightbox-img').src = src;
+            document.getElementById('lightbox-modal').classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeLightbox() {
+            document.getElementById('lightbox-modal').classList.remove('active');
+            document.body.style.overflow = 'auto';
+        }
+
+        // Cerrar lightbox con tecla Escape
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') closeLightbox();
+        });
+    </script>
+</body>
+</html>
